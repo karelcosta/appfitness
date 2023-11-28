@@ -32,7 +32,7 @@ class ExploreScreen extends StatelessWidget {
             Center(
               child: ExerciseCard(
                 exerciseName: 'desafio do dia',
-                imageUrl: 'lib/imagens/imgexercicios/01.png',
+                imageUrl: 'assets/images/01.png',
                 caloriesBurned: 50,
                 duration: '10min',
               ),
@@ -50,7 +50,7 @@ class ExploreScreen extends StatelessWidget {
             ),
             Container(
               height: 178,
-              width: 1000,
+              width: double.infinity,
               child: Padding(
                 padding: const EdgeInsets.only(left: 16.0), // Espaçamento à esquerda
                 child: ListView.builder(
@@ -82,7 +82,7 @@ class ExploreScreen extends StatelessWidget {
             ),
             Container(
               height: 178,
-              width: 1000,
+              width: double.infinity,
               child: Padding(
                 padding: const EdgeInsets.only(left: 16.0), // Espaçamento à esquerda
                 child: ListView.builder(
@@ -114,7 +114,7 @@ class ExploreScreen extends StatelessWidget {
             ),
             Container(
               height: 178,
-              width: 1000,
+              width: double.infinity,
               child: Padding(
                 padding: const EdgeInsets.only(left: 16.0), // Espaçamento à esquerda
                 child: ListView.builder(

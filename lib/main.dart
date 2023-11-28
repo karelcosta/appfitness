@@ -4,7 +4,6 @@ import 'package:appfitness/components/barra_de_navegação.dart';
 import 'package:appfitness/themes/colors.dart';
 import 'package:appfitness/pages/tela_cadastro.dart';
 
-
 void main() {
   runApp(MyApp());
 }
@@ -29,8 +28,8 @@ class MainScreen extends StatelessWidget {
       body: Stack(
         children: [
           // Imagem na tela inteira
-          Image.network(
-            'lib/imagens/image01.png',
+          Image.asset(
+            'assets/images/image01.png',
             fit: BoxFit.cover,
             height: double.infinity,
             width: double.infinity,

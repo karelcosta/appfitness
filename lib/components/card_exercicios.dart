@@ -28,7 +28,7 @@ class ExerciseCard extends StatelessWidget {
             // Background image
             ClipRRect(
               borderRadius: BorderRadius.circular(8.0),
-              child: Image.network(
+              child: Image.asset(
                 imageUrl,
                 fit: BoxFit.cover,
                 height: 178,

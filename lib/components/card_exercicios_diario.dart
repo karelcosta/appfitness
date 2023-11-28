@@ -29,7 +29,7 @@ class DailyExerciseCard extends StatelessWidget {
                 topLeft: Radius.circular(8.0),
                 bottomLeft: Radius.circular(8.0),
               ),
-              child: Image.network(
+              child: Image.asset(
                 exerciseImage,
                 fit: BoxFit.cover,
                 height: 120,
