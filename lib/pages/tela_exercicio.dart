@@ -5,12 +5,14 @@ class ExerciseScreen extends StatelessWidget {
   final String imageUrl;
   final int caloriesBurned;
   final String duration;
+  final String description;
 
   ExerciseScreen({
     required this.exerciseName,
     required this.imageUrl,
     required this.caloriesBurned,
     required this.duration,
+    required this.description,
   });
 
   @override
@@ -30,6 +32,9 @@ class ExerciseScreen extends StatelessWidget {
                 height: 178,
                 width: 280,
               ),
+            ),
+            Text(
+              description,
             ),
           ]
         ),

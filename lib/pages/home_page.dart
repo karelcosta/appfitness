@@ -97,6 +97,7 @@ class HomeScreen extends StatelessWidget {
                       imageUrl: exerciseList[index]['imageUrl'],
                       caloriesBurned: exerciseList[index]['calories'],
                       duration: exerciseList[index]['duration'],
+                      description: '',
                     ),
                   );
                 },
@@ -132,8 +133,10 @@ class HomeScreen extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(vertical: 8.0),
                             child: DailyExerciseCard(
                               exerciseName: dailyExerciseList[index]['name'],
-                              exerciseImage: dailyExerciseList[index]['imageUrl'],
+                              imageUrl: dailyExerciseList[index]['imageUrl'],
                               description: dailyExerciseList[index]['description'],
+                              caloriesBurned: 0,
+                              duration: '',
                             ),
                           );
                         },

@@ -35,6 +35,7 @@ class ExploreScreen extends StatelessWidget {
                 imageUrl: 'assets/images/01.png',
                 caloriesBurned: 50,
                 duration: '10min',
+                description: '',
               ),
             ),
             Padding(
@@ -61,8 +62,10 @@ class ExploreScreen extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: ExerciseCardRezumid(
                         exerciseName: exerecomendado[index]['name'],
-                        exerciseImage: exerecomendado[index]['imageUrl'],
+                        imageUrl: exerecomendado[index]['imageUrl'],
                         description: exerecomendado[index]['description'],
+                        caloriesBurned: 0,
+                        duration: '',
                       ),
                     );
                   },
@@ -93,8 +96,11 @@ class ExploreScreen extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: ExerciseCardRezumid(
                         exerciseName: exerapido[index]['name'],
-                        exerciseImage: exerapido[index]['imageUrl'],
+                        imageUrl: exerapido[index]['imageUrl'],
                         description: exerapido[index]['description'],
+                        caloriesBurned: 0,
+                        duration: '',
+
                       ),
                     );
                   },
@@ -125,8 +131,10 @@ class ExploreScreen extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: ExerciseCardRezumid(
                         exerciseName: exerapido[index]['name'],
-                        exerciseImage: exerapido[index]['imageUrl'],
+                        imageUrl: exerapido[index]['imageUrl'],
                         description: exerapido[index]['description'],
+                        caloriesBurned: 0,
+                        duration: '',
                       ),
                     );
                   },

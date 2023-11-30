@@ -6,12 +6,14 @@ class ExerciseCard extends StatelessWidget {
   final String imageUrl;
   final int caloriesBurned;
   final String duration;
+  final String description;
 
   ExerciseCard({
     required this.exerciseName,
     required this.imageUrl,
     required this.caloriesBurned,
     required this.duration,
+    required this.description,
   });
 
   @override
@@ -26,6 +28,7 @@ class ExerciseCard extends StatelessWidget {
               imageUrl: imageUrl,
               caloriesBurned: caloriesBurned,
               duration: duration,
+              description: '',
             ), // Substitua ExerciseScreen() pela sua tela de exercício
           ),
         );

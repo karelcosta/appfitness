@@ -2,12 +2,16 @@ import 'package:flutter/material.dart';
 
 class ExerciseCardRezumid extends StatelessWidget {
   final String exerciseName;
-  final String exerciseImage;
+  final String imageUrl;
+  final int caloriesBurned;
+  final String duration;
   final String description;
 
   ExerciseCardRezumid({
     required this.exerciseName,
-    required this.exerciseImage,
+    required this.imageUrl,
+    required this.caloriesBurned,
+    required this.duration,
     required this.description,
   });
 
@@ -30,7 +34,7 @@ class ExerciseCardRezumid extends StatelessWidget {
                 bottomLeft: Radius.circular(8.0),
               ),
               child: Image.asset(
-                exerciseImage,
+                imageUrl,
                 fit: BoxFit.cover,
                 height: 120,
                 width: 120,
