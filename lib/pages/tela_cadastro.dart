@@ -29,7 +29,7 @@ class _UserRegistrationFlowState extends State<UserRegistrationFlow> {
         _currentStep++;
       });
     } else {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => NavigationScreen()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => NavigationScreen()));
       // Implemente a lógica para finalizar o cadastro ou navegar para a próxima tela
       // Por exemplo, ao final das perguntas, pode ser que você deseje salvar as informações
       // ou navegar para a próxima tela do aplicativo.
