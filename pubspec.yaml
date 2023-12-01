@@ -30,6 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  sqflite: ^2.0.0+3
+  path_provider: ^2.0.14 # Para obter o diretório de armazenamento local
   # cupertino_icons: ^1.0.2
   # fl_chart: ^0.41.0
 

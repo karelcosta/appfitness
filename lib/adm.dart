@@ -6,18 +6,21 @@ class ExerciseData {
         'imageUrl': 'assets/images/01.png',
         'calories': 100,
         'duration': '30 minutos',
+        'description': 'Descrição do exercício diário 1',
       },
       {
         'name': 'Exercício 2',
         'imageUrl': 'assets/images/02.png',
         'calories': 100,
         'duration': '30 minutos',
+        'description': 'Descrição do exercício diário 1',
       },
       {
         'name': 'Exercício 3',
         'imageUrl': 'assets/images/03.png',
         'calories': 100,
         'duration': '30 minutos',
+        'description': 'Descrição do exercício diário 1',
       },
       // Adicione mais exercícios conforme necessário
     ];
@@ -27,16 +30,22 @@ class ExerciseData {
       {
         'name': 'Exercício Diário 1',
         'imageUrl': 'assets/images/04.png',
+        'calories': 120,
+        'duration': '25 minutos',
         'description': 'Descrição do exercício diário 1',
       },
       {
         'name': 'Exercício Diário 2',
         'imageUrl': 'assets/images/05.png',
+        'calories': 120,
+        'duration': '25 minutos',
         'description': 'Descrição do exercício diário 1',
       },
       {
         'name': 'Exercício Diário 3',
         'imageUrl': 'assets/images/06.png',
+        'calories': 120,
+        'duration': '25 minutos',
         'description': 'Descrição do exercício diário 1',
       },
       

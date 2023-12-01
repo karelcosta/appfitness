@@ -24,6 +24,29 @@ class ExerciseScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            AppBar(
+              title: Text(
+                exerciseName,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+              centerTitle: true, // Centraliza o texto
+              flexibleSpace: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [Colors.black.withOpacity(0.6), Colors.transparent],
+                    stops: [0.5, 1.0],
+                  ),
+                ),
+              ),
+              // automaticallyImplyLeading: false,
+            ),
             ClipRRect(
               borderRadius: BorderRadius.circular(8.0),
               child: Image.asset(
@@ -33,8 +56,16 @@ class ExerciseScreen extends StatelessWidget {
                 width: 280,
               ),
             ),
-            Text(
-              description,
+            SizedBox(height: 20), 
+            Center(
+              child: Text(
+                'descripiton',
+                style: TextStyle(
+                  fontSize: 20,
+                  // fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
             ),
           ]
         ),

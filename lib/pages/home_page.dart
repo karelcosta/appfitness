@@ -97,7 +97,7 @@ class HomeScreen extends StatelessWidget {
                       imageUrl: exerciseList[index]['imageUrl'],
                       caloriesBurned: exerciseList[index]['calories'],
                       duration: exerciseList[index]['duration'],
-                      description: '',
+                      description: exerciseList[index]['description'],
                     ),
                   );
                 },
