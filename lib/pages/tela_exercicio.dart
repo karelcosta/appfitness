@@ -59,7 +59,7 @@ class ExerciseScreen extends StatelessWidget {
             SizedBox(height: 20), 
             Center(
               child: Text(
-                'descripiton',
+                description,
                 style: TextStyle(
                   fontSize: 20,
                   // fontWeight: FontWeight.bold,
@@ -67,6 +67,7 @@ class ExerciseScreen extends StatelessWidget {
                 ),
               ),
             ),
+
           ]
         ),
       ),

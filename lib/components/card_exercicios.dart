@@ -28,7 +28,7 @@ class ExerciseCard extends StatelessWidget {
               imageUrl: imageUrl,
               caloriesBurned: caloriesBurned,
               duration: duration,
-              description: '',
+              description: description,
             ), // Substitua ExerciseScreen() pela sua tela de exercício
           ),
         );

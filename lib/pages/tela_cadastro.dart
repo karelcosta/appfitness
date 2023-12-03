@@ -5,7 +5,6 @@ import 'package:appfitness/pages/pages_cadastro/objetivo.dart';
 import 'package:appfitness/pages/pages_cadastro/nivel.dart';
 import 'package:appfitness/components/barra_de_navegação.dart';
 
-
 class UserRegistrationFlow extends StatefulWidget {
   @override
   _UserRegistrationFlowState createState() => _UserRegistrationFlowState();
@@ -71,6 +70,3 @@ class _UserRegistrationFlowState extends State<UserRegistrationFlow> {
     );
   }
 }
-
-
-

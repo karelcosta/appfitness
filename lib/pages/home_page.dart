@@ -59,14 +59,12 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           // SizedBox(height: 5), // Espaço entre o nome e o card de meta semanal
-          // ...
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: WeeklyGoalCard(
               goalsAchieved: [true, true, false, false, false, false, false], // Exemplo de metas alcançadas
             ),
           ),
-          // ...
 
           SizedBox(height: 15), 
           Container(
