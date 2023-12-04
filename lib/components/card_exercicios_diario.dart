@@ -72,7 +72,7 @@ class DailyExerciseCard extends StatelessWidget {
                     ),
                     SizedBox(height: 4),
                     Text(
-                      description,
+                      '',
                       style: TextStyle(fontSize: 14),
                     ),
                   ],

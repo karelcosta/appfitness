@@ -51,7 +51,7 @@ class ExerciseCardRezumid extends StatelessWidget {
                 ),
                 child: Image.asset(
                   imageUrl,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                   height: 120,
                   width: 120,
                 ),
@@ -71,10 +71,10 @@ class ExerciseCardRezumid extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 4),
-                    Text(
-                      description,
-                      style: TextStyle(fontSize: 14),
-                    ),
+                    // Text(
+                    //   duration,
+                    //   style: TextStyle(fontSize: 14),
+                    // ),
                   ],
                 ),
               ),

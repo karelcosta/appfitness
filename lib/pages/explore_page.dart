@@ -35,7 +35,7 @@ class ExploreScreen extends StatelessWidget {
                 imageUrl: 'assets/images/01.png',
                 caloriesBurned: 50,
                 duration: '10min',
-                description: '',
+                description: 'descrição',
               ),
             ),
             Padding(
@@ -64,8 +64,8 @@ class ExploreScreen extends StatelessWidget {
                         exerciseName: exerecomendado[index]['name'],
                         imageUrl: exerecomendado[index]['imageUrl'],
                         description: exerecomendado[index]['description'],
-                        caloriesBurned: 0,
-                        duration: '',
+                        caloriesBurned: exerecomendado[index]['calories'],
+                        duration: exerecomendado[index]['duration'],
                       ),
                     );
                   },
@@ -98,9 +98,8 @@ class ExploreScreen extends StatelessWidget {
                         exerciseName: exerapido[index]['name'],
                         imageUrl: exerapido[index]['imageUrl'],
                         description: exerapido[index]['description'],
-                        caloriesBurned: 0,
-                        duration: '',
-
+                        caloriesBurned: exerapido[index]['calories'],
+                        duration: exerapido[index]['duration'],
                       ),
                     );
                   },

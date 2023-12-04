@@ -18,6 +18,7 @@ class HomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+
           Container(
             height: 90,
             width: 1000,
@@ -133,8 +134,8 @@ class HomeScreen extends StatelessWidget {
                               exerciseName: dailyExerciseList[index]['name'],
                               imageUrl: dailyExerciseList[index]['imageUrl'],
                               description: dailyExerciseList[index]['description'],
-                              caloriesBurned: 0,
-                              duration: '',
+                              caloriesBurned: dailyExerciseList[index]['calories'],
+                              duration: dailyExerciseList[index]['duration'],
                             ),
                           );
                         },

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:appfitness/components/card_dadosexercicios.dart';
 
 class ExerciseScreen extends StatelessWidget {
   final String exerciseName;
@@ -18,7 +19,7 @@ class ExerciseScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF4D008C),
+      backgroundColor: Color(0xFF3b006b),//0xFF4D008C
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16.0),
         child: Column(
@@ -26,7 +27,7 @@ class ExerciseScreen extends StatelessWidget {
           children: [
             AppBar(
               title: Text(
-                exerciseName,
+                '',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 24,
@@ -56,8 +57,30 @@ class ExerciseScreen extends StatelessWidget {
                 width: 280,
               ),
             ),
+
             SizedBox(height: 20), 
-            Center(
+            
+            DetalhesExercicio(
+              duration: duration, // Substitua 'duration' e 'caloriesBurned' pelos seus valores
+              caloriesBurned: caloriesBurned,
+            ),
+
+            SizedBox(height: 20), 
+
+            Container(
+              child: Text(
+                exerciseName,
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+
+            SizedBox(height: 20), 
+
+            Container(
               child: Text(
                 description,
                 style: TextStyle(

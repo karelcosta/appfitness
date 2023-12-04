@@ -32,16 +32,31 @@ class ProfileScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Center(
-              child: Text(
+            AppBar(
+              title: Text(
                 'RELATORIO',
                 style: TextStyle(
-                  fontSize: 24,
                   color: Colors.white,
-                  // Adicione outros estilos aqui, se desejar
+                  fontSize: 24,
                 ),
               ),
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+              centerTitle: true,
+              automaticallyImplyLeading: false, // Centraliza o texto
+              flexibleSpace: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [Colors.black.withOpacity(0.6), Colors.transparent],
+                    stops: [0.5, 1.0],
+                  ),
+                ),
+              ),
+              // automaticallyImplyLeading: false,
             ),
+
             SizedBox(height: 20), 
             StatsReport(),
             SizedBox(height: 20),
