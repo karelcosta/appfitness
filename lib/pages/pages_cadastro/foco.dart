@@ -55,13 +55,6 @@ class _FocusAreaSelectionScreenState extends State<FocusAreaSelectionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // title: Text(
-        //   '',
-        //   style: TextStyle(
-        //     color: Colors.black,
-        //     fontSize: 20,
-        //   ),
-        // ),
         backgroundColor: Colors.transparent,
         elevation: 0, // Para remover a sombra
         iconTheme: IconThemeData(color: Colors.black), // Altera a cor do ícone de volta para preto

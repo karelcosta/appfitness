@@ -55,7 +55,7 @@ class _UserRegistrationFlowState extends State<UserRegistrationFlow> {
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(150, 50), // Define o tamanho mínimo do botão
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(25), // Borda circular
+                    borderRadius: BorderRadius.circular(10), // Borda circular
                   ),
                 ),
                 child: Text(

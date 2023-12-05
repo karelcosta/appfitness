@@ -1,4 +1,103 @@
-class ExerciseData {
+import 'package:sqflite/sqflite.dart';
+import 'package:path/path.dart';
+
+class ExerciseDatabase {
+  static Future<Database> openDB() async {
+    final databasePath = await getDatabasesPath();
+    final path = join(databasePath, 'exercise_database.db');
+
+    return openDatabase(
+      path,
+      version: 1,
+      onCreate: (db, version) async {
+        await db.execute('''
+          CREATE TABLE exercicios_em_destaque(
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT,
+            imageUrl TEXT,
+            calories INTEGER,
+            duration TEXT,
+            description TEXT
+          )
+        ''');
+
+        await createAdditionalTables(db);
+      },
+    );
+  }
+
+  static Future<void> createAdditionalTables(Database db) async {
+    await db.execute('''
+      CREATE TABLE exercicios_diarios(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        imageUrl TEXT,
+        calories INTEGER,
+        duration TEXT,
+        description TEXT
+      )
+    ''');
+
+    await db.execute('''
+      CREATE TABLE exercicios_rapidos(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        imageUrl TEXT,
+        calories INTEGER,
+        duration TEXT,
+        description TEXT
+      )
+    ''');
+
+    await db.execute('''
+      CREATE TABLE exercicios_recomendados(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        imageUrl TEXT,
+        calories INTEGER,
+        duration TEXT,
+        description TEXT
+      )
+    ''');
+
+    await db.execute('''
+      CREATE TABLE aquecimento_rapido(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        imageUrl TEXT,
+        calories INTEGER,
+        duration TEXT,
+        description TEXT
+      )
+    ''');
+  }
+
+  static Future<void> insertExercises(String tableName) async {
+    final Database db = await openDB();
+    final exercises = getExerciseList();
+
+    for (var exercise in exercises) {
+      await db.insert(
+        tableName,
+        exercise,
+        conflictAlgorithm: ConflictAlgorithm.replace,
+      );
+    }
+  }
+
+  static Future<List<Map<String, dynamic>>> getExercisesFromDB(String tableName) async {
+    final Database db = await openDB();
+    return db.query(tableName);
+  }
+
+  static Future<List<Map<String, dynamic>>> getExerciciosEmDestaqueFromDB() async {
+    return getExercisesFromDB('exercicios_em_destaque');
+  }
+
+  static Future<void> insertExerciciosEmDestaque() async {
+    return insertExercises('exercicios_em_destaque');
+  }
+
   static List<Map<String, dynamic>> getExerciseList() {
     return [
       {
@@ -155,13 +254,4 @@ class ExerciseData {
       // Adicione mais exercícios conforme necessário
     ];
   }
-}
-
-class UserData {
-  static double userWeight = 75.0; // Peso do usuário em kg
-  static double userHeight = 1.75; // Altura do usuário em metros
-
-  static int calories = 1500; // Dados do relatório
-  static int exerciseCount = 5; // Dados do relatório
-  static int trainingTime = 120; // Dados do relatório
 }
