@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:appfitness/adm.dart';
-import 'package:appfitness/components/barra_de_navegação.dart';
-import 'package:appfitness/themes/colors.dart';
+// import 'package:appfitness/components/barra_de_navegação.dart';
 import 'package:appfitness/pages/tela_cadastro.dart';
+import 'package:path/path.dart';
+import 'package:sqflite/sqflite.dart';
+import 'package:appfitness/Data/DB.dart';
 
-void main() {
+void main() async {
+
+  WidgetsFlutterBinding.ensureInitialized();
+  await initializeDatabase();
+
   runApp(MyApp());
+}
+
+Future<void> initializeDatabase() async {
+  DatabaseHelper databaseHelper = DatabaseHelper();
+  await databaseHelper.initializeDatabase();
 }
 
 class MyApp extends StatelessWidget {

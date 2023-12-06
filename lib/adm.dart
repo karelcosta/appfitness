@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class ExerciseData {
   static List<Map<String, dynamic>> getExerciseList() {
     return [
@@ -160,8 +162,11 @@ class ExerciseData {
 class UserData {
   static double userWeight = 75.0; // Peso do usuário em kg
   static double userHeight = 1.75; // Altura do usuário em metros
-
   static int calories = 1500; // Dados do relatório
   static int exerciseCount = 5; // Dados do relatório
   static int trainingTime = 120; // Dados do relatório
 }
+
+
+
+
