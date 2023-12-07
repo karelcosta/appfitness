@@ -86,6 +86,7 @@ class DatabaseHelper {
         duration TEXT,
         description TEXT,
         task TEXT
+        nivel INTEGER,
       )
     ''');
   }

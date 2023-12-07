@@ -9,6 +9,7 @@ class ExerciseData {
   final String description;
   final int tipo;
   final List<String> tasks; 
+  final int nivel;
 
   ExerciseData({
     required this.id,
@@ -19,5 +20,7 @@ class ExerciseData {
     required this.description,
     required this.tipo,
     required this.tasks,
+    required this.nivel,
+
   });
 }

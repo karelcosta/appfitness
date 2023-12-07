@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:appfitness/components/card_dadosexercicios.dart';
 import 'package:appfitness/adm.dart';
 import 'package:appfitness/components/task.dart';
-import 'package:appfitness/pages/play.dart';
+// import 'package:appfitness/pages/play.dart';
 
 class ExerciseScreen extends StatelessWidget {
   final String exerciseName;

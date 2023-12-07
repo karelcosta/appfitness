@@ -12,6 +12,7 @@ List<ExerciseData> exercicelist = [
     description: 'Descrição do exercício diário 1',
     tipo: 1,
     tasks: ['', '', ''],
+    nivel: 1,
   ),
   ExerciseData(
     id: 2,
@@ -22,6 +23,7 @@ List<ExerciseData> exercicelist = [
     description: 'Descrição do exercício diário 1',
     tipo: 1,
     tasks: ['', '', ''],
+    nivel: 2,
   ),
   ExerciseData(
     id: 3,
@@ -32,6 +34,7 @@ List<ExerciseData> exercicelist = [
     description: 'Descrição do exercício diário 1',
     tipo: 1,
     tasks: ['', '', ''],
+    nivel: 3,
   ),
 
   // Peito
@@ -44,6 +47,7 @@ List<ExerciseData> exercicelist = [
     description: 'Descrição do exercício diário 1',
     tipo: 2,
     tasks: ['', '', ''],
+    nivel: 1,
   ),
   ExerciseData(
     id: 5,
@@ -54,6 +58,7 @@ List<ExerciseData> exercicelist = [
     description: 'Descrição do exercício diário 1',
     tipo: 2,
     tasks: ['', '', ''],
+    nivel: 2,
   ),
   ExerciseData(
     id: 6,
@@ -64,6 +69,7 @@ List<ExerciseData> exercicelist = [
     description: 'Descrição do exercício diário 1',
     tipo: 2,
     tasks: ['', '', ''],
+    nivel: 3,
   ),
 
   // Abdomen
@@ -76,6 +82,7 @@ List<ExerciseData> exercicelist = [
     description: 'Descrição do exercício diário 1',
     tipo: 3,
     tasks: ['', '', ''],
+    nivel: 1,
   ),
   ExerciseData(
     id: 8,
@@ -86,6 +93,7 @@ List<ExerciseData> exercicelist = [
     description: 'Descrição do exercício diário 1',
     tipo: 3,
     tasks: ['', '', ''],
+    nivel: 2,
   ),
   ExerciseData(
     id: 9,
@@ -96,6 +104,7 @@ List<ExerciseData> exercicelist = [
     description: 'Descrição do exercício diário 1',
     tipo: 3,
     tasks: ['', '', ''],
+    nivel: 3,
   ),
 
   // Perna
@@ -108,6 +117,7 @@ List<ExerciseData> exercicelist = [
     description: 'Descrição do exercício diário 1',
     tipo: 4,
     tasks: ['', '', ''],
+    nivel: 1,
   ),
   ExerciseData(
     id: 11,
@@ -118,6 +128,7 @@ List<ExerciseData> exercicelist = [
     description: 'Descrição do exercício diário 1',
     tipo: 4,
     tasks: ['', '', ''],
+    nivel: 2,
   ),
   ExerciseData(
     id: 12,
@@ -128,6 +139,7 @@ List<ExerciseData> exercicelist = [
     description: 'Descrição do exercício diário 1',
     tipo: 4,
     tasks: ['', '', ''],
+    nivel: 3,
   ),
 
   // Costas e Ombro
@@ -140,6 +152,7 @@ List<ExerciseData> exercicelist = [
     description: 'Descrição do exercício diário 1',
     tipo: 5,
     tasks: ['', '', ''],
+    nivel: 1,
   ),
   ExerciseData(
     id: 14,
@@ -150,6 +163,7 @@ List<ExerciseData> exercicelist = [
     description: 'Descrição do exercício diário 1',
     tipo: 5,
     tasks: ['', '', ''],
+    nivel: 2,
   ),
   ExerciseData(
     id: 15,
@@ -160,5 +174,6 @@ List<ExerciseData> exercicelist = [
     description: 'Descrição do exercício diário 1',
     tipo: 5,
     tasks: ['', '', ''],
+    nivel: 3,
   ),
 ];

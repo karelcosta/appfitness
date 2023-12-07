@@ -11,6 +11,7 @@ List<ExerciseData> alongamentoslist = [
     description: 'Descrição do exercício diário 1',
     tipo: 1,
     tasks: ['', '', ''],
+    nivel: 0,
   ),ExerciseData(
     id: 17,
     name: 'Braço Iniciante',
@@ -20,6 +21,7 @@ List<ExerciseData> alongamentoslist = [
     description: 'Descrição do exercício diário 1',
     tipo: 1,
     tasks: ['', '', ''],
+    nivel: 0,
   ),ExerciseData(
     id: 18,
     name: 'Braço Iniciante',
@@ -29,6 +31,7 @@ List<ExerciseData> alongamentoslist = [
     description: 'Descrição do exercício diário 1',
     tipo: 1,
     tasks: ['', '', ''],
+    nivel: 0,
   ),ExerciseData(
     id: 19,
     name: 'Braço Iniciante',
@@ -38,6 +41,7 @@ List<ExerciseData> alongamentoslist = [
     description: 'Descrição do exercício diário 1',
     tipo: 1,
     tasks: ['', '', ''],
+    nivel: 0,
   ),ExerciseData(
     id: 20,
     name: 'Braço Iniciante',
@@ -47,6 +51,7 @@ List<ExerciseData> alongamentoslist = [
     description: 'Descrição do exercício diário 1',
     tipo: 1,
     tasks: ['', '', ''],
+    nivel: 0,
   ),ExerciseData(
     id: 21,
     name: 'Braço Iniciante',
@@ -56,6 +61,7 @@ List<ExerciseData> alongamentoslist = [
     description: 'Descrição do exercício diário 1',
     tipo: 1,
     tasks: ['', '', ''],
+    nivel: 0,
   ),ExerciseData(
     id: 22,
     name: 'Braço Iniciante',
@@ -65,5 +71,6 @@ List<ExerciseData> alongamentoslist = [
     description: 'Descrição do exercício diário 1',
     tipo: 1,
     tasks: ['', '', ''],
+    nivel: 0,
   ),
 ];
