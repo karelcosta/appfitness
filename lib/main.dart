@@ -5,11 +5,20 @@ import 'package:appfitness/pages/tela_cadastro.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:appfitness/Data/DB.dart';
+import 'package:appfitness/Data/DataExercicios.dart';
 
 void main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
+  
+  // DatabaseHelper exerciseDB = DatabaseHelper();
+  // await exerciseDB.database;
   await initializeDatabase();
+  // await exerciseDB.insertExercises(exercicelist);
+  // List<ExerciseData> exercisesFromDB = await exerciseDB.getExercises();
+  // exercisesFromDB.forEach((exercise) {
+  //   print('Exercício: ${exercise.name}');
+  // });
 
   runApp(MyApp());
 }
