@@ -11,7 +11,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 1,
-    tasks: ['', '', ''],
+    tasks: ['1', '1', '1'],
     nivel: 1,
   ),
   ExerciseData(
@@ -22,7 +22,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 1,
-    tasks: ['', '', ''],
+    tasks: ['1', '1', '1'],
     nivel: 2,
   ),
   ExerciseData(
@@ -33,7 +33,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 1,
-    tasks: ['', '', ''],
+    tasks: ['1', '1', '1'],
     nivel: 3,
   ),
 
@@ -46,7 +46,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 2,
-    tasks: ['', '', ''],
+    tasks: ['1', '1', '1'],
     nivel: 1,
   ),
   ExerciseData(
@@ -57,7 +57,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 2,
-    tasks: ['', '', ''],
+    tasks: ['1', '1', '1'],
     nivel: 2,
   ),
   ExerciseData(
@@ -68,7 +68,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 2,
-    tasks: ['', '', ''],
+    tasks: ['1', '1', '1'],
     nivel: 3,
   ),
 
@@ -81,7 +81,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 3,
-    tasks: ['', '', ''],
+    tasks: ['1', '1', '1'],
     nivel: 1,
   ),
   ExerciseData(
@@ -92,7 +92,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 3,
-    tasks: ['', '', ''],
+    tasks: ['1', '1', '1'],
     nivel: 2,
   ),
   ExerciseData(
@@ -103,7 +103,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 3,
-    tasks: ['', '', ''],
+    tasks: ['1', '1', '1'],
     nivel: 3,
   ),
 
@@ -116,7 +116,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 4,
-    tasks: ['', '', ''],
+    tasks: ['1', '1', '1'],
     nivel: 1,
   ),
   ExerciseData(
@@ -127,7 +127,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 4,
-    tasks: ['', '', ''],
+    tasks: ['1', '1', '1'],
     nivel: 2,
   ),
   ExerciseData(
@@ -138,7 +138,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 4,
-    tasks: ['', '', ''],
+    tasks: ['1', '1', '1'],
     nivel: 3,
   ),
 
@@ -151,7 +151,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 5,
-    tasks: ['', '', ''],
+    tasks: ['1', '1', '1'],
     nivel: 1,
   ),
   ExerciseData(
@@ -162,7 +162,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 5,
-    tasks: ['', '', ''],
+    tasks: ['1', '1', '1'],
     nivel: 2,
   ),
   ExerciseData(
@@ -173,7 +173,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 5,
-    tasks: ['', '', ''],
+    tasks: ['1', '1', '1'],
     nivel: 3,
   ),
 ];

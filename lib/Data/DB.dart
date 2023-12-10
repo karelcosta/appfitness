@@ -16,11 +16,8 @@ class DatabaseHelper {
       version: 1,
       onCreate: (db, version) async {
         await _createUserTable(db);
-        await _createExerciciosRecomandadosTable(db);
-        await _createExerciciosDestaqueTable(db);
+        await _createTaskTable(db);
         await _createExerciciosTable(db);
-        await _createExerciciosRapidosTable(db);
-        await _createAquecimentosRapidosTable(db);
       },
     );
   }
@@ -46,32 +43,8 @@ class DatabaseHelper {
       )
     ''');
   }
-  Future<void> _createExerciciosRecomandadosTable(Database db) async {
-    await db.execute('''
-      CREATE TABLE exerciciosrecomandados(
-        id INTEGER PRIMARY KEY,
-        name TEXT,
-        imageUrl TEXT,
-        calories INTEGER,
-        duration TEXT,
-        description TEXT,
-        task TEXT
-      )
-    ''');
-  }
-  Future<void> _createExerciciosDestaqueTable(Database db) async {
-    await db.execute('''
-      CREATE TABLE exerciciosdestaque(
-        id INTEGER PRIMARY KEY,
-        name TEXT,
-        imageUrl TEXT,
-        calories INTEGER,
-        duration TEXT,
-        description TEXT,
-        task TEXT
-      )
-    ''');
-  }
+
+
   Future<void> _createExerciciosTable(Database db) async {
     await db.execute('''
       CREATE TABLE exercicios(
@@ -81,37 +54,14 @@ class DatabaseHelper {
         calories INTEGER,
         duration TEXT,
         description TEXT,
-        task TEXT
-        nivel INTEGER,
+        tipo INTEGER,
+        tasks TEXT,
+        nivel INTEGER
       )
     ''');
   }
-  Future<void> _createExerciciosRapidosTable(Database db) async {
-    await db.execute('''
-      CREATE TABLE exercicios_rapidos(
-        id INTEGER PRIMARY KEY,
-        name TEXT,
-        imageUrl TEXT,
-        calories INTEGER,
-        duration TEXT,
-        description TEXT,
-        task TEXT
-      )
-    ''');
-  }
-  Future<void> _createAquecimentosRapidosTable(Database db) async {
-    await db.execute('''
-      CREATE TABLE aquecimentos_rapidos(
-        id INTEGER PRIMARY KEY,
-        name TEXT,
-        imageUrl TEXT,
-        calories INTEGER,
-        duration TEXT,
-        description TEXT,
-        task TEXT
-      )
-    ''');
-  }
+
+
 
   //metodo para chamar o banco de dados
   //perguntar ao chat onde chamar esse metodo
@@ -132,7 +82,7 @@ class DatabaseHelper {
     final batch = db.batch();
 
     exercises.forEach((exercise) {
-      batch.insert('exercises', {
+      batch.insert('exercicios', {
         'id': exercise.id,
         'name': exercise.name,
         'imageUrl': exercise.imageUrl,

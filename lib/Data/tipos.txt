@@ -3,27 +3,3 @@
 3 - abidomen
 4 - perna
 5 - costas e ombro
-
-task tipos:
-braço iniciante - 1
-braço intermediario - 2
-braço avançado - 3
-
-peito iniciante - 4
-peito intermediario - 5
-peito avançado - 6
-
-abidomen iniciante - 7
-abidomen intermediario - 8
-abidomen avançado - 9
-
-perna iniciante - 10
-perna intermediario - 11
-perna avançado - 12
-
-costas e ombro iniciante - 13
-costas e ombro intermediario - 14
-costas e ombro avançado - 15
-
-alongamentos
-16 - 22 
