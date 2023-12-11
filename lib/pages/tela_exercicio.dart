@@ -23,7 +23,7 @@ class ExerciseScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    List<Map<String, dynamic>> taskList = ExerciseData.gettaskList();
+    List<Map<String, dynamic>> taskList = ExerciseData2.gettaskList();
 
     return Scaffold(
       backgroundColor: Color(0xFF3b006b),//0xFF4D008C

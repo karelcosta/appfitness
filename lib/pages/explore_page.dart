@@ -6,8 +6,8 @@ import 'package:appfitness/components/card_exercicios.dart';
 class ExploreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<Map<String, dynamic>> exerecomendado = ExerciseData.getRecommendedExercises1();
-    List<Map<String, dynamic>> exerapido = ExerciseData.getQuickWorkouts();
+    List<Map<String, dynamic>> exerecomendado = ExerciseData2.getRecommendedExercises1();
+    List<Map<String, dynamic>> exerapido = ExerciseData2.getQuickWorkouts();
 
     return Scaffold(
       backgroundColor: Color(0xFF4D008C),

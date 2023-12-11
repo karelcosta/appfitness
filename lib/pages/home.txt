@@ -3,12 +3,32 @@ import 'package:appfitness/components/card_exercicios.dart';
 import 'package:appfitness/components/card_exercicios_diario.dart';
 import 'package:appfitness/adm.dart'; 
 import 'package:appfitness/components/card_meta_semanal.dart';
+import 'package:appfitness/Data/DB.dart';
+import 'package:appfitness/Data/ClassExercise.dart';
 
 class HomeScreen extends StatelessWidget {
+  final DatabaseHelper _databaseHelper = DatabaseHelper();
+
   @override
   Widget build(BuildContext context) {
     List<Map<String, dynamic>> exerciseList = ExerciseData2.getExerciseList();
     List<Map<String, dynamic>> dailyExerciseList = ExerciseData2.getDailyExerciseList();
+
+    List<ExerciseData> exerciseInicial = await _databaseHelper.getExercisesByLevel(1);
+    List<ExerciseData> exerciseIntermediario = await _databaseHelper.getExercisesByLevel(2);
+    List<ExerciseData> exerciseAvancado = await _databaseHelper.getExercisesByLevel(3);
+
+    // Obtendo exercícios para diferentes níveis usando getExercisesByLevel
+    // _getExercisesByLevel() async {
+    //   exerciseInicial = await _databaseHelper.getExercisesByLevel(1);
+    //   exerciseIntermediario = await _databaseHelper.getExercisesByLevel(2);
+    //   exerciseAvancado = await _databaseHelper.getExercisesByLevel(3);
+    // }
+
+    // Chame _getExercisesByLevel para buscar os exercícios
+    // _getExercisesByLevel();
+
+    
 
     return Scaffold(
       backgroundColor: Color(0xFF4D008C),
@@ -177,16 +197,16 @@ class HomeScreen extends StatelessWidget {
                       height: MediaQuery.of(context).size.height - 380, // Definindo a altura da lista para ocupar o restante da tela
                       child: ListView.builder(
                         physics: NeverScrollableScrollPhysics(),
-                        itemCount: dailyExerciseList.length,
+                        itemCount: exerciseAvancado.length,
                         itemBuilder: (BuildContext context, int index) {
                           return Padding(
                             padding: const EdgeInsets.symmetric(vertical: 8.0),
                             child: DailyExerciseCard(
-                              exerciseName: dailyExerciseList[index]['name'],
-                              imageUrl: dailyExerciseList[index]['imageUrl'],
-                              description: dailyExerciseList[index]['description'],
-                              caloriesBurned: dailyExerciseList[index]['calories'],
-                              duration: dailyExerciseList[index]['duration'],
+                              exerciseName: exerciseAvancado[index].name,
+                              imageUrl: exerciseAvancado[index].imageUrl,
+                              description: exerciseAvancado[index].description,
+                              caloriesBurned: exerciseAvancado[index].calories,
+                              duration: exerciseAvancado[index].duration,
                             ),
                           );
                         },

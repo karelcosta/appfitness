@@ -80,6 +80,8 @@ flutter:
     - assets/images/14.png
     - assets/images/15.png
     - assets/images/16.png
+    - assets/db/appfitness.db
+    - assets/db/appfitness.db-journal
 
 
 

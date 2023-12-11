@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ExerciseData {
+class ExerciseData2 {
   static List<Map<String, dynamic>> getExerciseList() {
     return [
       {

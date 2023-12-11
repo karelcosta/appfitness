@@ -3,6 +3,7 @@ import 'package:appfitness/pages/home_page.dart';
 import 'package:appfitness/pages/explore_page.dart';
 import 'package:appfitness/pages/perfil_page.dart';
 import 'package:appfitness/pages/tela_cadastro.dart';
+import 'package:appfitness/Data/DB.dart';
 
 class NavigationScreen extends StatefulWidget {
   @override
@@ -16,7 +17,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
     ExploreScreen(),
     ProfileScreen(),
   ];
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
