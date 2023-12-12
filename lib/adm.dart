@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:appfitness/Data/ClassExercise.dart';
+import 'package:appfitness/Data/ClassTask.dart';
 
 class ExerciseData2 {
   static List<Map<String, dynamic>> getExerciseList() {
@@ -25,33 +26,6 @@ class ExerciseData2 {
         'description': 'Descrição do exercício diário 1',
       },
       // Adicione mais exercícios conforme necessário
-    ];
-  }
-  static List<Map<String, dynamic>> getDailyExerciseList() {
-    return [
-      {
-        'name': 'Exercício Diário 1',
-        'imageUrl': 'assets/images/04.png',
-        'calories': 120,
-        'duration': '25 minutos',
-        'description': 'Descrição do exercício diário 1',
-      },
-      {
-        'name': 'Exercício Diário 2',
-        'imageUrl': 'assets/images/05.png',
-        'calories': 120,
-        'duration': '25 minutos',
-        'description': 'Descrição do exercício diário 1',
-      },
-      {
-        'name': 'Exercício Diário 3',
-        'imageUrl': 'assets/images/06.png',
-        'calories': 120,
-        'duration': '25 minutos',
-        'description': 'Descrição do exercício diário 1',
-      },
-      
-      // Adicione mais exercícios diários conforme necessário
     ];
   }
 
@@ -167,6 +141,10 @@ class UserData {
   static int trainingTime = 120; // Dados do relatório
 }
 
+List<ExerciseData> filtrarExercicios(List<ExerciseData> exercicios, List<int> tipos, List<int> niveis) {
+  return exercicios.where((exercicio) => tipos.contains(exercicio.tipo) && niveis.contains(exercicio.nivel)).toList();
+}
 
-
-
+List<TaskData> filterTasksById(List<TaskData> tasks, int id) {
+  return tasks.where((task) => task.id == id).toList();
+}

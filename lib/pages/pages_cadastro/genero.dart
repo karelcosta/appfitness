@@ -38,10 +38,10 @@ class _GenderSelectionScreenState extends State<GenderSelectionScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Padding(
-            padding: EdgeInsets.only(top: 20),
+          Center(
             child: Text(
               'Qual é o seu sexo?',
+              textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,

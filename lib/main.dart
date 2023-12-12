@@ -8,7 +8,6 @@ import 'package:appfitness/Data/DataExercicios.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await initDatabase();
 
   runApp(MyApp());
 }

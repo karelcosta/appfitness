@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:appfitness/Data/ClassTask.dart';
 
 List<TaskData> tasks = [  

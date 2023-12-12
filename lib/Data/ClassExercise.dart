@@ -8,7 +8,7 @@ class ExerciseData {
   final String duration;
   final String description;
   final int tipo;
-  final List<String> tasks; 
+  final List<int> tasks; 
   final int nivel;
 
   ExerciseData({

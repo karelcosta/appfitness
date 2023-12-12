@@ -70,10 +70,10 @@ class _NVAreaSelectionScreenState extends State<NivelAreaSelectionScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Padding(
-            padding: EdgeInsets.only(top: 20),
+          Center(
             child: Text(
               'Qual é seu nivel de atividade física?',
+              textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,

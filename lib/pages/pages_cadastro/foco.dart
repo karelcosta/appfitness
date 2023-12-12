@@ -63,10 +63,10 @@ class _FocusAreaSelectionScreenState extends State<FocusAreaSelectionScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Padding(
-            padding: EdgeInsets.only(top: 20),
+          Center(
             child: Text(
               'Qual área você deseja focar?',
+              textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,

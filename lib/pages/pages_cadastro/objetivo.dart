@@ -71,10 +71,10 @@ class _objAreaSelectionScreenState extends State<ObjAreaSelectionScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Padding(
-            padding: EdgeInsets.only(top: 20),
+          Center(
             child: Text(
               'Quais são seus principais objetivos?',
+              textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,

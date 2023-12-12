@@ -1,4 +1,3 @@
-// import 'package:flutter/material.dart';
 import 'package:appfitness/Data/ClassExercise.dart';
 
 List<ExerciseData> exercicelist = [
@@ -11,7 +10,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 1,
-    tasks: ['1', '1', '1'],
+    tasks: [1, 1, 1], // Alterado para lista de inteiros
     nivel: 1,
   ),
   ExerciseData(
@@ -22,7 +21,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 1,
-    tasks: ['1', '1', '1'],
+    tasks: [1, 1, 1], // Alterado para lista de inteiros
     nivel: 2,
   ),
   ExerciseData(
@@ -33,10 +32,9 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 1,
-    tasks: ['1', '1', '1'],
+    tasks: [1, 1, 1], // Alterado para lista de inteiros
     nivel: 3,
   ),
-
   // Peito
   ExerciseData(
     id: 4,
@@ -46,7 +44,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 2,
-    tasks: ['1', '1', '1'],
+    tasks: [1, 1, 1], // Alterado para lista de inteiros
     nivel: 1,
   ),
   ExerciseData(
@@ -57,7 +55,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 2,
-    tasks: ['1', '1', '1'],
+    tasks: [1, 1, 1], // Alterado para lista de inteiros
     nivel: 2,
   ),
   ExerciseData(
@@ -68,10 +66,9 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 2,
-    tasks: ['1', '1', '1'],
+    tasks: [1, 1, 1], // Alterado para lista de inteiros
     nivel: 3,
   ),
-
   // Abdomen
   ExerciseData(
     id: 7,
@@ -81,7 +78,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 3,
-    tasks: ['1', '1', '1'],
+    tasks: [1, 1, 1], // Alterado para lista de inteiros
     nivel: 1,
   ),
   ExerciseData(
@@ -92,7 +89,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 3,
-    tasks: ['1', '1', '1'],
+    tasks: [1, 1, 1], // Alterado para lista de inteiros
     nivel: 2,
   ),
   ExerciseData(
@@ -103,10 +100,9 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 3,
-    tasks: ['1', '1', '1'],
+    tasks: [1, 1, 1], // Alterado para lista de inteiros
     nivel: 3,
   ),
-
   // Perna
   ExerciseData(
     id: 10,
@@ -116,7 +112,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 4,
-    tasks: ['1', '1', '1'],
+    tasks: [1, 1, 1], // Alterado para lista de inteiros
     nivel: 1,
   ),
   ExerciseData(
@@ -127,7 +123,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 4,
-    tasks: ['1', '1', '1'],
+    tasks: [1, 1, 1], // Alterado para lista de inteiros
     nivel: 2,
   ),
   ExerciseData(
@@ -138,10 +134,9 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 4,
-    tasks: ['1', '1', '1'],
+    tasks: [1, 1, 1], // Alterado para lista de inteiros
     nivel: 3,
   ),
-
   // Costas e Ombro
   ExerciseData(
     id: 13,
@@ -151,7 +146,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 5,
-    tasks: ['1', '1', '1'],
+    tasks: [1, 1, 1], // Alterado para lista de inteiros
     nivel: 1,
   ),
   ExerciseData(
@@ -162,7 +157,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 5,
-    tasks: ['1', '1', '1'],
+    tasks: [1, 1, 1], // Alterado para lista de inteiros
     nivel: 2,
   ),
   ExerciseData(
@@ -173,7 +168,7 @@ List<ExerciseData> exercicelist = [
     duration: '30 minutos',
     description: 'Descrição do exercício diário 1',
     tipo: 5,
-    tasks: ['1', '1', '1'],
+    tasks: [1, 1, 1], // Alterado para lista de inteiros
     nivel: 3,
   ),
 ];
