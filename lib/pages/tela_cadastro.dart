@@ -1,6 +1,11 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:appfitness/Data/DB.dart';
 import 'package:appfitness/components/barra_de_navegação.dart';
+import 'package:appfitness/DB/hive_config.dart';
+import 'package:appfitness/DB/crate_user.dart';
+import 'package:appfitness/DB/hive_adapter.dart';
 
 class CadastroScreen extends StatefulWidget {
   @override
@@ -8,9 +13,12 @@ class CadastroScreen extends StatefulWidget {
 }
 
 class _CadastroScreenState extends State<CadastroScreen> {
-  String sexo = '';
-  double peso = 1;
-  double altura = 1;
+  final TextEditingController pesoControler = TextEditingController();
+  final TextEditingController alturaControler = TextEditingController();
+  
+  String? sexo;
+  double? peso;
+  double? altura;
   int cardAtual = 1;
 
   @override
@@ -62,6 +70,7 @@ class _CadastroScreenState extends State<CadastroScreen> {
         children: [
           Text('Qual é o seu peso?'),
           TextFormField(
+            controller: pesoControler,
             keyboardType: TextInputType.number,
             onChanged: (value) {
               peso = double.parse(value);
@@ -69,14 +78,30 @@ class _CadastroScreenState extends State<CadastroScreen> {
           ),
           Text('Qual é a sua altura?'),
           TextFormField(
+            controller: alturaControler,
             keyboardType: TextInputType.number,
             onChanged: (value) {
               altura = double.parse(value);
             },
           ),
           ElevatedButton(
-            onPressed: () {
-              _salvarDados();
+            onPressed: () async {
+              double peso = double.parse(pesoControler.text);
+              double altura = double.parse(alturaControler.text);
+
+              if (peso != null && altura != null)
+              {
+                CreateUser createUser = CreateUser(
+                  peso: peso,
+                  altura: altura,
+                );
+
+                await HiveConfig.insertHistory(createUser);
+                _irParaProximaTela();
+
+              }else{
+                  
+              }
             },
             child: Text('Finalizar Tarefa'),
           ),
@@ -86,16 +111,16 @@ class _CadastroScreenState extends State<CadastroScreen> {
     return SizedBox(); // Card vazio se a etapa de cadastro terminar
   }
 
-  void _salvarDados() async {
-    Map<String, dynamic> cadastro = {
-      'sexo': sexo,
-      'peso': peso,
-      'altura': altura,
-    };
-    // await dbHelper.insertCadastro(cadastro);
-    // Mostrar card de carregamento
-    _mostrarCardCarregando();
-  }
+  // void _salvarDados() async {
+  //   Map<String, dynamic> cadastro = {
+  //     'sexo': sexo,
+  //     'peso': peso,
+  //     'altura': altura,
+  //   };
+  //   // await dbHelper.insertCadastro(cadastro);
+  //   // Mostrar card de carregamento
+  //   _mostrarCardCarregando();
+  // }
 
   void _mostrarCardCarregando() {
     showDialog(

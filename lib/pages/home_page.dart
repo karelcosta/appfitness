@@ -18,7 +18,9 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Color(0xFF4D008C),
-      body: SingleChildScrollView(
+      body:SafeArea(
+        child: SingleChildScrollView(
+
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -120,7 +122,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 30), 
                     Text(
-                      'intermediario',
+                      'Intermediario',
                       style: TextStyle(
                         fontSize: 20,
                       ),
@@ -184,6 +186,8 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
+      ),
     );
   }
 }
+       

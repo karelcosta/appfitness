@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:appfitness/adm.dart';
 import 'package:appfitness/pages/tela_cadastro.dart';
+import 'package:hive/hive.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:appfitness/Data/DB.dart';
 import 'package:appfitness/Data/DataExercicios.dart';
+import 'package:appfitness/DB/crate_user.dart';
+import 'package:appfitness/DB/hive_adapter.dart';
+import 'package:appfitness/DB/hive_config.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  await HiveConfig.start();
+  Hive.registerAdapter(HiveAdapter());
   runApp(MyApp());
 }
 
