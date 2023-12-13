@@ -66,16 +66,12 @@ class ExerciseScreen extends StatelessWidget {
                 width: 280,
               ),
             ),
-
             SizedBox(height: 20), 
-            
             DetalhesExercicio(
               duration: duration, 
               caloriesBurned: caloriesBurned,
             ),
-
             SizedBox(height: 20), 
-
             Container(
               child: Text(
                 exerciseName,
@@ -86,9 +82,7 @@ class ExerciseScreen extends StatelessWidget {
                 ),
               ),
             ),
-
             SizedBox(height: 20), 
-
             Container(
               child: Text(
                 description,
@@ -98,33 +92,26 @@ class ExerciseScreen extends StatelessWidget {
                 ),
               ),
             ),
-
             SizedBox(height: 20), 
-
             ListView.builder(
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
               itemCount: taskList.length, 
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
-                  padding: EdgeInsets.symmetric(vertical: 8.0),
-                  child: task(
+                  padding: EdgeInsets.symmetric(vertical: 12.0), // Aumentando o espaço vertical
+                  child: Task(
                     name: taskList[index].name,
                     carga: taskList[index].carga,
                     id: taskList[index].id,
                     tipo: taskList[index].tipo,
-
-                  ), // Use o componente criado aqui
+                  ),
                 );
               },
-            ),  
-            
-                      
-
+            ),
           ]
         ),
       ),
-
       bottomNavigationBar: GestureDetector(
         onTap: () {
           // Navigator.push(
@@ -153,7 +140,6 @@ class ExerciseScreen extends StatelessWidget {
           ),
         ),
       ),
-
     );
   }
 }

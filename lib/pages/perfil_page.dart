@@ -56,9 +56,8 @@ class ProfileScreen extends StatelessWidget {
               ),
               // automaticallyImplyLeading: false,
             ),
-
             SizedBox(height: 20), 
-            StatsReport(),
+            // StatsReport(),
             SizedBox(height: 20),
             WeeklyGoalCard(
                     goalsAchieved: [true, false, false, false, false, false, false],

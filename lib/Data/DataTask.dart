@@ -4,121 +4,121 @@ List<TaskData> listasks = [
   TaskData(
     id: 1,
     name: 'supino',
-    carga: '',
+    carga: '3 x 10',
     tipo: 2, // Peito
   ),
   TaskData(
     id: 2,
     name: 'Agachamento',
-    carga: '',
+    carga: '3 x 10',
     tipo: 4, // Perna
   ),
   TaskData(
     id: 3,
     name: 'Levantamento terra',
-    carga: '',
+    carga: '3 x 10',
     tipo: 4, // Perna
   ),
   TaskData(
     id: 4,
     name: 'Puxada na barra',
-    carga: '',
+    carga: '3 x 10',
     tipo: 5, // Costas e Ombro
   ),
   TaskData(
     id: 5,
     name: 'Remada',
-    carga: '',
+    carga: '3 x 10',
     tipo: 5, // Costas e Ombro
   ),
   TaskData(
     id: 6,
     name: 'Rosca direta (com halteres ou barra)',
-    carga: '',
+    carga: '3 x 10',
     tipo: 1, // Braço
   ),
   TaskData(
     id: 7,
     name: 'Abdominais',
-    carga: '',
+    carga: '3 x 10',
     tipo: 3, // Abdômen
   ),
   TaskData(
     id: 8,
     name: 'Lunges',
-    carga: '',
+    carga: '3 x 10',
     tipo: 4, // Perna
   ),
   TaskData(
     id: 9,
     name: 'Elevação lateral',
-    carga: '',
+    carga: '3 x 10',
     tipo: 5, // Costas e Ombro
   ),
   TaskData(
     id: 10,
     name: 'Flexão de pernas',
-    carga: '',
+    carga: '3 x 10',
     tipo: 4, // Perna
   ),
   TaskData(
     id: 11,
     name: 'Agachamento sumô',
-    carga: '',
+    carga: '3 x 10',
     tipo: 4, // Perna
   ),
   TaskData(
     id: 12,
     name: 'Stiff',
-    carga: '',
+    carga: '3 x 10',
     tipo: 4, // Perna
   ),
   TaskData(
     id: 13,
     name: 'Pressão de ombros (com halteres ou barra)',
-    carga: '',
+    carga: '3 x 10',
     tipo: 5, // Costas e Ombro
   ),
   TaskData(
     id: 14,
     name: 'Elevação frontal',
-    carga: '',
+    carga: '3 x 10',
     tipo: 5, // Costas e Ombro
   ),
   TaskData(
     id: 15,
     name: 'Prancha',
-    carga: '',
+    carga: '3 x 10',
     tipo: 3, // Abdômen
   ),
   TaskData(
     id: 16,
     name: 'Curl de bíceps',
-    carga: '',
+    carga: '3 x 10',
     tipo: 1, // Braço
   ),
   TaskData(
     id: 17,
     name: 'Tríceps pulley',
-    carga: '',
+    carga: '3 x 10',
     tipo: 1, // Braço
   ),
   TaskData(
     id: 18,
     name: 'Panturrilha no smith',
-    carga: '',
+    carga: '3 x 10',
     tipo: 4, // Perna
   ),
   TaskData(
     id: 19,
     name: 'Hip thrust',
-    carga: '',
+    carga: '3 x 10',
     tipo: 4, // Perna
   ),
   TaskData(
     id: 20,
     name: 'Flexão de braço',
-    carga: '',
+    carga: '3 x 10',
     tipo: 1, // Braço
   ),
 ];

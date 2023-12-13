@@ -9,9 +9,6 @@ import 'package:appfitness/components/card_meta_semanal.dart';
 import 'package:appfitness/Data/DataExeCasa.dart';
 
 class HomeScreen extends StatelessWidget {
-
-  // DatabaseHelper datadb = DatabaseHelper();
-  
   @override
   Widget build(BuildContext context) {
     List<Map<String, dynamic>> exerciseList = ExerciseData2.getExerciseList();
@@ -21,7 +18,7 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Color(0xFF4D008C),
-      body: SingleChildScrollView( // Envolver toda a estrutura em um SingleChildScrollView
+      body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -31,43 +28,7 @@ class HomeScreen extends StatelessWidget {
               elevation: 0,
               automaticallyImplyLeading: false, 
             ),
-            // Container(
-            //   height: 90,
-            //   width: double.infinity,
-            //   padding: EdgeInsets.all(16.0),
-            //   child: Row(
-            //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //     children: [
-            //       // Expanded(
-            //       //   flex: 1,
-            //       //   child: Column(
-            //       //     crossAxisAlignment: CrossAxisAlignment.start,
-            //       //     children: [
-            //       //       Text(
-            //       //         'Bom dia',
-            //       //         style: TextStyle(
-            //       //           fontSize: 14,
-            //       //           color: Colors.white,
-            //       //         ),
-            //       //       ),
-            //       //       Text(
-            //       //         'name',
-            //       //         style: TextStyle(
-            //       //           fontSize: 24,
-            //       //           color: Colors.white,
-            //       //         ),
-            //       //       ),
-            //       //     ],
-            //       //   ),
-            //       // ),
-            //       Expanded(
-            //         flex: 1,
-            //         child: Container(),
-            //       ),
-            //     ],
-            //   ),
-            // ),
-            Padding(
+            Container(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: WeeklyGoalCard(
                 goalsAchieved: [true, true, false, false, false, false, false],
@@ -124,22 +85,19 @@ class HomeScreen extends StatelessWidget {
                     Text(
                       'Treino em Casa',
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 24,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 30),
                     Text(
                       'Iniciante',
                       style: TextStyle(
                         fontSize: 20,
-                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 10),
-                    
                     Container(
-                      height: MediaQuery.of(context).size.height - 0,//380 // Definindo a altura da lista para ocupar o restante da tela
+                      height: MediaQuery.of(context).size.height - 80,
                       child: ListView.builder(
                         physics: NeverScrollableScrollPhysics(),
                         itemCount: exeriniciante.length,
@@ -160,17 +118,15 @@ class HomeScreen extends StatelessWidget {
                         },
                       ),
                     ),
-                    SizedBox(height: 10), 
+                    SizedBox(height: 30), 
                     Text(
                       'intermediario',
                       style: TextStyle(
                         fontSize: 20,
-                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 10), 
                     Container(
-                      height: MediaQuery.of(context).size.height - 0,//380 // Definindo a altura da lista para ocupar o restante da tela
+                      height: MediaQuery.of(context).size.height - 80,
                       child: ListView.builder(
                         physics: NeverScrollableScrollPhysics(),
                         itemCount: exerintermediario.length,
@@ -191,17 +147,15 @@ class HomeScreen extends StatelessWidget {
                         },
                       ),
                     ),
-                    SizedBox(height: 10), 
+                    SizedBox(height: 30), 
                     Text(
                       'Avançado',
                       style: TextStyle(
                         fontSize: 20,
-                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 10), 
                     Container(
-                      height: MediaQuery.of(context).size.height - 0,//380 // Definindo a altura da lista para ocupar o restante da tela
+                      height: MediaQuery.of(context).size.height - 50,
                       child: ListView.builder(
                         physics: NeverScrollableScrollPhysics(),
                         itemCount: exeravancado.length,

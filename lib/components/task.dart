@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:appfitness/Data/ClassTask.dart';
 
-class task extends StatelessWidget {
+class Task extends StatefulWidget {
   final String name;
   final String carga;
   final int id;
   final int tipo;
 
-  task({
+  Task({
     required this.name,
     required this.carga,
     required this.id,
@@ -15,41 +14,56 @@ class task extends StatelessWidget {
   });
 
   @override
+  _TaskState createState() => _TaskState();
+}
+
+class _TaskState extends State<Task> {
+  bool isChecked = false;
+
+  @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black,
+      margin: EdgeInsets.all(8.0), // Adicionando margens de 8.0 em todos os lados
+      decoration: BoxDecoration(
+        color: isChecked ? Colors.grey[300] : Colors.white,
+        borderRadius: BorderRadius.circular(10.0),
+      ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Expanded(
-          //   child: Container(
-          //     // Adicione sua imagem aqui
-          //     // Exemplo: child: Image.asset('caminho_da_sua_imagem'),
-          //     child:  Image.asset('assets/images/01.png'), // definir as imagens usadas 
-          //   ),
-          // ),
           Expanded(
             flex: 2,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  name,
+                  widget.name,
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
                 ),
                 Text(
-                  carga,
+                  widget.carga,
                   style: TextStyle(
-                    fontSize: 13,
-                    color: Colors.white,
+                    fontSize: 15,
+                    color: Colors.black,
                   ),
                 ),
               ],
             ),
+          ),
+          IconButton(
+            icon: Icon(
+              isChecked ? Icons.check_circle : Icons.radio_button_unchecked,
+              color: Colors.blue,
+            ),
+            onPressed: () {
+              setState(() {
+                isChecked = !isChecked;
+              });
+            },
           ),
         ],
       ),
