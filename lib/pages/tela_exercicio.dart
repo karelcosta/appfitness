@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:appfitness/components/card_dadosexercicios.dart';
 import 'package:appfitness/adm.dart';
 import 'package:appfitness/components/task.dart';
+import 'package:appfitness/Data/ClassTask.dart';
+import 'package:appfitness/Data/DataTask.dart';
 // import 'package:appfitness/pages/play.dart';
 
 class ExerciseScreen extends StatelessWidget {
@@ -11,6 +13,9 @@ class ExerciseScreen extends StatelessWidget {
   final int caloriesBurned;
   final String duration;
   final String description;
+  final int nivel;
+  final int tipo;
+  final List<int> tasks;
 
   ExerciseScreen({
     required this.exerciseName,
@@ -18,12 +23,16 @@ class ExerciseScreen extends StatelessWidget {
     required this.caloriesBurned,
     required this.duration,
     required this.description,
+    required this.nivel,
+    required this.tipo,
+    required this.tasks,
+
   });
 
   @override
   Widget build(BuildContext context) {
 
-    List<Map<String, dynamic>> taskList = ExerciseData2.gettaskList();
+    List<TaskData> taskList = filterTasksByListIds(listasks, tasks);
 
     return Scaffold(
       backgroundColor: Color(0xFF3b006b),//0xFF4D008C
@@ -95,11 +104,17 @@ class ExerciseScreen extends StatelessWidget {
             ListView.builder(
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
-              itemCount: 20, 
+              itemCount: taskList.length, 
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
                   padding: EdgeInsets.symmetric(vertical: 8.0),
-                  child: task(), // Use o componente criado aqui
+                  child: task(
+                    name: taskList[index].name,
+                    carga: taskList[index].carga,
+                    id: taskList[index].id,
+                    tipo: taskList[index].tipo,
+
+                  ), // Use o componente criado aqui
                 );
               },
             ),  

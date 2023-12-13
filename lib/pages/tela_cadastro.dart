@@ -1,78 +1,130 @@
 import 'package:flutter/material.dart';
-import 'package:appfitness/pages/pages_cadastro/genero.dart';
-import 'package:appfitness/pages/pages_cadastro/foco.dart';
-import 'package:appfitness/pages/pages_cadastro/objetivo.dart';
-import 'package:appfitness/pages/pages_cadastro/nivel.dart';
+import 'package:appfitness/Data/DB.dart';
 import 'package:appfitness/components/barra_de_navegação.dart';
 
-class UserRegistrationFlow extends StatefulWidget {
+class CadastroScreen extends StatefulWidget {
   @override
-  _UserRegistrationFlowState createState() => _UserRegistrationFlowState();
+  _CadastroScreenState createState() => _CadastroScreenState();
 }
 
-class _UserRegistrationFlowState extends State<UserRegistrationFlow> {
-  int _currentStep = 0; // Controla a etapa atual do fluxo de cadastro
-
-  List<Widget> _steps = [
-    GenderSelectionScreen(),
-    FocusAreaSelectionScreen(),
-    ObjAreaSelectionScreen(),
-    NivelAreaSelectionScreen(),
-
-    // Adicione outras telas aqui de acordo com o fluxo de perguntas
-  ];
-
-  void _nextStep() {
-    if (_currentStep < _steps.length - 1) {
-      setState(() {
-        _currentStep++;
-      });
-    } else {
-      Navigator.pushAndRemoveUntil(
-        context,
-        MaterialPageRoute(builder: (context) => NavigationScreen()),
-        ModalRoute.withName('/'), // Pode ser uma rota específica
-      );
-
-      // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => NavigationScreen()));
-      // Implemente a lógica para finalizar o cadastro ou navegar para a próxima tela
-      // Por exemplo, ao final das perguntas, pode ser que você deseje salvar as informações
-      // ou navegar para a próxima tela do aplicativo.
-    }
-  }
+class _CadastroScreenState extends State<CadastroScreen> {
+  String sexo = '';
+  double peso = 1;
+  double altura = 1;
+  int cardAtual = 1;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text(''),
-      // ),
-      body: _steps[_currentStep],
-      bottomNavigationBar: BottomAppBar(
-        elevation: 0.0, // Remover a sombra
-        color: Colors.transparent, // Defina a cor do BottomAppBar conforme necessário
-        child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 10.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ElevatedButton(
-                onPressed: _nextStep,
-                style: ElevatedButton.styleFrom(
-                  minimumSize: Size(150, 50), // Define o tamanho mínimo do botão
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10), // Borda circular
-                  ),
-                ),
-                child: Text(
-                  _currentStep == _steps.length - 1 ? 'Finalizar' : 'Próxima',
-                ),
-              ),
-            ],
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Card(
+          elevation: 5.0,
+          margin: EdgeInsets.all(20.0),
+          child: Padding(
+            padding: EdgeInsets.all(20.0),
+            child: _buildCardContent(),
           ),
         ),
       ),
+    );
+  }
 
+  Widget _buildCardContent() {
+    if (cardAtual == 1) {
+      return Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text('Qual é o seu sexo?'),
+          ElevatedButton(
+            onPressed: () {
+              setState(() {
+                sexo = 'Feminino';
+                cardAtual++;
+              });
+            },
+            child: Text('Feminino'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              setState(() {
+                sexo = 'Masculino';
+                cardAtual++;
+              });
+            },
+            child: Text('Masculino'),
+          ),
+        ],
+      );
+    } else if (cardAtual == 2) {
+      return Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text('Qual é o seu peso?'),
+          TextFormField(
+            keyboardType: TextInputType.number,
+            onChanged: (value) {
+              peso = double.parse(value);
+            },
+          ),
+          Text('Qual é a sua altura?'),
+          TextFormField(
+            keyboardType: TextInputType.number,
+            onChanged: (value) {
+              altura = double.parse(value);
+            },
+          ),
+          ElevatedButton(
+            onPressed: () {
+              _salvarDados();
+            },
+            child: Text('Finalizar Tarefa'),
+          ),
+        ],
+      );
+    }
+    return SizedBox(); // Card vazio se a etapa de cadastro terminar
+  }
+
+  void _salvarDados() async {
+    Map<String, dynamic> cadastro = {
+      'sexo': sexo,
+      'peso': peso,
+      'altura': altura,
+    };
+    // await dbHelper.insertCadastro(cadastro);
+    // Mostrar card de carregamento
+    _mostrarCardCarregando();
+  }
+
+  void _mostrarCardCarregando() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Processando'),
+          content: Text('Os dados estão sendo salvos no banco de dados...'),
+          actions: <Widget>[
+            ElevatedButton(
+              child: Text('OK'),
+              onPressed: () {
+                Navigator.of(context).pop();
+                // Navegar para a próxima tela após salvar os dados
+                _irParaProximaTela();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void _irParaProximaTela() {
+    // Aqui você pode navegar para a próxima tela
+    // Por exemplo:
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => NavigationScreen()),
     );
   }
 }

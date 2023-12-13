@@ -5,7 +5,8 @@ import 'package:appfitness/components/card_exercicios_diario.dart';
 import 'package:appfitness/adm.dart'; 
 import 'package:appfitness/components/card_meta_semanal.dart';
 // import 'package:appfitness/Data/DB.dart';
-import 'package:appfitness/Data/DataExercicios.dart';
+// import 'package:appfitness/Data/DataExercicios.dart';
+import 'package:appfitness/Data/DataExeCasa.dart';
 
 class HomeScreen extends StatelessWidget {
 
@@ -14,9 +15,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Map<String, dynamic>> exerciseList = ExerciseData2.getExerciseList();
-    List<ExerciseData> exeriniciante = filtrarExercicios(exercicelist, [1,2,3,4,5], [1]);
-    List<ExerciseData> exerintermediario = filtrarExercicios(exercicelist, [1,2,3,4,5], [2]);
-    List<ExerciseData> exeravancado = filtrarExercicios(exercicelist, [1,2,3,4,5], [3]);
+    List<ExerciseData> exeriniciante = filtrarExercicios(exerciceCasaList, [1,2,3,4,5], [1]);
+    List<ExerciseData> exerintermediario = filtrarExercicios(exerciceCasaList, [1,2,3,4,5], [2]);
+    List<ExerciseData> exeravancado = filtrarExercicios(exerciceCasaList, [1,2,3,4,5], [3]);
 
     return Scaffold(
       backgroundColor: Color(0xFF4D008C),
@@ -72,7 +73,7 @@ class HomeScreen extends StatelessWidget {
                 goalsAchieved: [true, true, false, false, false, false, false],
               ),
             ),
-            SizedBox(height: 15), 
+            SizedBox(height: 30), 
             Container(
               padding: EdgeInsets.only(left: 16.0),
               child: Text(
@@ -100,6 +101,9 @@ class HomeScreen extends StatelessWidget {
                         caloriesBurned: exerciseList[index]['calories'],
                         duration: exerciseList[index]['duration'],
                         description: exerciseList[index]['description'],
+                        nivel: exerciseList[index]['calories'],
+                        tipo: exerciseList[index]['calories'],
+                        tasks: [1,2,3,4,5],
                       ),
                     );
                   },
@@ -118,16 +122,24 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
+                      'Treino em Casa',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
                       'Iniciante',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    // SizedBox(height: 10),
+                    SizedBox(height: 10),
                     
                     Container(
-                      height: MediaQuery.of(context).size.height - 100,//380 // Definindo a altura da lista para ocupar o restante da tela
+                      height: MediaQuery.of(context).size.height - 0,//380 // Definindo a altura da lista para ocupar o restante da tela
                       child: ListView.builder(
                         physics: NeverScrollableScrollPhysics(),
                         itemCount: exeriniciante.length,
@@ -140,22 +152,25 @@ class HomeScreen extends StatelessWidget {
                               description: exeriniciante[index].description,
                               caloriesBurned: exeriniciante[index].calories,
                               duration: exeriniciante[index].duration,
+                              nivel: exeriniciante[index].nivel,
+                              tipo: exeriniciante[index].tipo,
+                              tasks: exeriniciante[index].tasks,
                             ),
                           );
                         },
                       ),
                     ),
-                    // SizedBox(height: 10),
+                    SizedBox(height: 10), 
                     Text(
-                      'Intermediario',
+                      'intermediario',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    // SizedBox(height: 10),
+                    SizedBox(height: 10), 
                     Container(
-                      height: MediaQuery.of(context).size.height - 100,//380 // Definindo a altura da lista para ocupar o restante da tela
+                      height: MediaQuery.of(context).size.height - 0,//380 // Definindo a altura da lista para ocupar o restante da tela
                       child: ListView.builder(
                         physics: NeverScrollableScrollPhysics(),
                         itemCount: exerintermediario.length,
@@ -168,12 +183,15 @@ class HomeScreen extends StatelessWidget {
                               description: exerintermediario[index].description,
                               caloriesBurned: exerintermediario[index].calories,
                               duration: exerintermediario[index].duration,
+                              nivel: exerintermediario[index].nivel,
+                              tipo: exerintermediario[index].tipo,
+                              tasks: exerintermediario[index].tasks,
                             ),
                           );
                         },
                       ),
                     ),
-                    // SizedBox(height: 10),
+                    SizedBox(height: 10), 
                     Text(
                       'Avançado',
                       style: TextStyle(
@@ -181,9 +199,9 @@ class HomeScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    // SizedBox(height: 10),
+                    SizedBox(height: 10), 
                     Container(
-                      height: MediaQuery.of(context).size.height - 100,//380 // Definindo a altura da lista para ocupar o restante da tela
+                      height: MediaQuery.of(context).size.height - 0,//380 // Definindo a altura da lista para ocupar o restante da tela
                       child: ListView.builder(
                         physics: NeverScrollableScrollPhysics(),
                         itemCount: exeravancado.length,
@@ -196,12 +214,15 @@ class HomeScreen extends StatelessWidget {
                               description: exeravancado[index].description,
                               caloriesBurned: exeravancado[index].calories,
                               duration: exeravancado[index].duration,
+                              nivel: exeravancado[index].nivel,
+                              tipo: exeravancado[index].tipo,
+                              tasks: exeravancado[index].tasks,
                             ),
                           );
                         },
                       ),
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 30),      
                   ],
                 ),
               ),

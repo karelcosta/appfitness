@@ -7,6 +7,9 @@ class ExerciseCardRezumid extends StatelessWidget {
   final int caloriesBurned;
   final String duration;
   final String description;
+  final int tipo;
+  final int nivel;
+  final List<int> tasks;
 
   ExerciseCardRezumid({
     required this.exerciseName,
@@ -14,6 +17,9 @@ class ExerciseCardRezumid extends StatelessWidget {
     required this.caloriesBurned,
     required this.duration,
     required this.description,
+    required this.tipo,
+    required this.nivel,
+    required this.tasks,
   });
 
   @override
@@ -29,6 +35,9 @@ class ExerciseCardRezumid extends StatelessWidget {
               caloriesBurned: caloriesBurned,
               duration: duration,
               description: description,
+              tipo: tipo,
+              nivel: nivel,
+              tasks: tasks,
             ), // Substitua ExerciseScreen() pela sua tela de exercício
           ),
         );

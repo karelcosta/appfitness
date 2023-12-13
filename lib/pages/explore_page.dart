@@ -36,6 +36,9 @@ class ExploreScreen extends StatelessWidget {
                 caloriesBurned: 50,
                 duration: '10min',
                 description: 'descrição',
+                tipo: 5,
+                nivel: 5,
+                tasks: [1,2,3,4,5],
               ),
             ),
             Padding(
@@ -66,6 +69,9 @@ class ExploreScreen extends StatelessWidget {
                         description: exerecomendado[index]['description'],
                         caloriesBurned: exerecomendado[index]['calories'],
                         duration: exerecomendado[index]['duration'],
+                        nivel: exerecomendado[index]['calories'],
+                        tipo: exerecomendado[index]['calories'],
+                        tasks: [1,2,3,4,5],
                       ),
                     );
                   },
@@ -100,6 +106,9 @@ class ExploreScreen extends StatelessWidget {
                         description: exerapido[index]['description'],
                         caloriesBurned: exerapido[index]['calories'],
                         duration: exerapido[index]['duration'],
+                        nivel: exerapido[index]['calories'],
+                        tipo: exerapido[index]['calories'],
+                        tasks: [1,2,3,4,5],
                       ),
                     );
                   },
@@ -132,8 +141,11 @@ class ExploreScreen extends StatelessWidget {
                         exerciseName: exerapido[index]['name'],
                         imageUrl: exerapido[index]['imageUrl'],
                         description: exerapido[index]['description'],
-                        caloriesBurned: 0,
-                        duration: '',
+                        caloriesBurned: exerapido[index]['calories'],
+                        duration: exerapido[index]['duration'],
+                        nivel: exerapido[index]['calories'],
+                        tipo: exerapido[index]['calories'],
+                        tasks: [1,2,3,4,5],
                       ),
                     );
                   },

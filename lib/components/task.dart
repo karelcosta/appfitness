@@ -1,6 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:appfitness/Data/ClassTask.dart';
 
 class task extends StatelessWidget {
+  final String name;
+  final String carga;
+  final int id;
+  final int tipo;
+
+  task({
+    required this.name,
+    required this.carga,
+    required this.id,
+    required this.tipo,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,7 +34,7 @@ class task extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Texto 1',
+                  name,
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -29,7 +42,7 @@ class task extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'Texto 2',
+                  carga,
                   style: TextStyle(
                     fontSize: 13,
                     color: Colors.white,

@@ -148,3 +148,7 @@ List<ExerciseData> filtrarExercicios(List<ExerciseData> exercicios, List<int> ti
 List<TaskData> filterTasksById(List<TaskData> tasks, int id) {
   return tasks.where((task) => task.id == id).toList();
 }
+
+List<TaskData> filterTasksByListIds(List<TaskData> tasks, List<int> ids) {
+  return tasks.where((task) => ids.contains(task.id)).toList();
+}

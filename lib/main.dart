@@ -59,7 +59,7 @@ class MainScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => UserRegistrationFlow()),
+                      MaterialPageRoute(builder: (context) => CadastroScreen()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
