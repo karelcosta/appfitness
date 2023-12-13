@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:appfitness/pages/home_page.dart';
 import 'package:appfitness/pages/explore_page.dart';
 import 'package:appfitness/pages/perfil_page.dart';
-import 'package:appfitness/pages/tela_cadastro.dart';
 import 'package:appfitness/Data/DB.dart';
 
 class NavigationScreen extends StatefulWidget {
