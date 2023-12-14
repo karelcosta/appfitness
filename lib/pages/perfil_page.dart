@@ -5,6 +5,7 @@ import 'package:appfitness/components/relatorio.dart';
 import 'package:appfitness/adm.dart'; 
 import 'package:appfitness/components/config_treinos.dart';
 import 'package:appfitness/components/config_app.dart';
+import 'package:appfitness/components/relatorio.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
@@ -57,7 +58,7 @@ class ProfileScreen extends StatelessWidget {
               // automaticallyImplyLeading: false,
             ),
             SizedBox(height: 20), 
-            // StatsReport(),
+            StatsReport(),
             SizedBox(height: 20),
             WeeklyGoalCard(
                     goalsAchieved: [true, false, false, false, false, false, false],
