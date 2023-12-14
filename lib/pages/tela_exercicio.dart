@@ -4,7 +4,6 @@ import 'package:appfitness/components/card_dadosexercicios.dart';
 import 'package:appfitness/adm.dart';
 import 'package:appfitness/components/task.dart';
 import 'package:appfitness/Data/ClassTask.dart';
-import 'package:appfitness/Data/DataTask.dart';
 // import 'package:appfitness/pages/play.dart';
 
 class ExerciseScreen extends StatelessWidget {
@@ -16,6 +15,7 @@ class ExerciseScreen extends StatelessWidget {
   final int nivel;
   final int tipo;
   final List<int> tasks;
+  final List<TaskData> listTasks;
 
   ExerciseScreen({
     required this.exerciseName,
@@ -26,13 +26,14 @@ class ExerciseScreen extends StatelessWidget {
     required this.nivel,
     required this.tipo,
     required this.tasks,
+    required this.listTasks,
 
   });
 
   @override
   Widget build(BuildContext context) {
 
-    List<TaskData> taskList = filterTasksByListIds(listasks, tasks);
+    List<TaskData> taskList = filterTasksByListIds(listTasks, tasks);
 
     return Scaffold(
       backgroundColor: Color(0xFF3b006b),//0xFF4D008C

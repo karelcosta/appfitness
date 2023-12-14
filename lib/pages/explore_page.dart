@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:appfitness/adm.dart';
 import 'package:appfitness/components/card_exercicios_resumido.dart';
 import 'package:appfitness/components/card_exercicios.dart';
+import 'package:appfitness/Data/DataTaskCasa.dart';
+import 'package:appfitness/Data/DataTask.dart';
 
 class ExploreScreen extends StatelessWidget {
   @override
@@ -39,6 +41,7 @@ class ExploreScreen extends StatelessWidget {
                 tipo: 5,
                 nivel: 5,
                 tasks: [2,1,3,4,6,7],
+                listTasks: listasks,
               ),
             ),
             Padding(
@@ -72,6 +75,7 @@ class ExploreScreen extends StatelessWidget {
                         nivel: exerecomendado[index]['calories'],
                         tipo: exerecomendado[index]['calories'],
                         tasks: [1,2,3,4,5],
+                        listTasks: listasks,
                       ),
                     );
                   },
@@ -80,6 +84,19 @@ class ExploreScreen extends StatelessWidget {
             ),
             
             SizedBox(height: 100), 
+            Center(
+              child: ExerciseCard(
+                exerciseName: 'Corpo Todo Em Casa',
+                imageUrl: 'assets/images/perna05.jpg',
+                caloriesBurned: 300,
+                duration: '30 a 45 minutos',
+                description: 'Este treino abrangente é projetado para trabalhar todo o corpo de maneira eficaz. Inclui exercícios focados em diferentes áreas, como peito, pernas, costas, ombros, braços e abdominais. Ao realizar esta rotina, você estará fortalecendo e tonificando diversos grupos musculares, promovendo resistência, estabilidade e definição muscular em todo o corpo. Prepare-se para um treino completo que visa aprimorar sua força e condicionamento físico global.',
+                tipo: 5,
+                nivel: 5,
+                tasks: [1,6,11,16,21],
+                listTasks: listaskscasa,
+              ),
+            ),
           ],
         ),
       ),

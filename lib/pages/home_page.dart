@@ -5,16 +5,15 @@ import 'package:appfitness/components/card_exercicios_diario.dart';
 import 'package:appfitness/adm.dart'; 
 import 'package:appfitness/components/card_meta_semanal.dart';
 // import 'package:appfitness/Data/DB.dart';
-// import 'package:appfitness/Data/DataExercicios.dart';
+import 'package:appfitness/Data/DataExercicios.dart';
 import 'package:appfitness/Data/DataExeCasa.dart';
+import 'package:appfitness/Data/DataTask.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<Map<String, dynamic>> exerciseList = ExerciseData2.getExerciseList();
-    List<ExerciseData> exeriniciante = filtrarExercicios(exerciceCasaList, [1,2,3,4,5], [1]);
-    List<ExerciseData> exerintermediario = filtrarExercicios(exerciceCasaList, [1,2,3,4,5], [2]);
-    List<ExerciseData> exeravancado = filtrarExercicios(exerciceCasaList, [1,2,3,4,5], [3]);
+    List<Map<String, dynamic>> corpotodo = ExerciseData2.getExerciseList();
+    List<ExerciseData> exeriniciante = filtrarExercicios(exercicelist, [1,2,3,4,5], [1]);
 
     return Scaffold(
       backgroundColor: Color(0xFF4D008C),
@@ -54,19 +53,20 @@ class HomeScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 16.0),
                 child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                  itemCount: exerciseList.length,
+                  itemCount: corpotodo.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ExerciseCard(
-                        exerciseName: exerciseList[index]['name'],
-                        imageUrl: exerciseList[index]['imageUrl'],
-                        caloriesBurned: exerciseList[index]['calories'],
-                        duration: exerciseList[index]['duration'],
-                        description: exerciseList[index]['description'],
-                        nivel: exerciseList[index]['calories'],
-                        tipo: exerciseList[index]['calories'],
+                        exerciseName: corpotodo[index]['name'],
+                        imageUrl: corpotodo[index]['imageUrl'],
+                        caloriesBurned: corpotodo[index]['calories'],
+                        duration: corpotodo[index]['duration'],
+                        description: corpotodo[index]['description'],
+                        nivel: corpotodo[index]['calories'],
+                        tipo: corpotodo[index]['calories'],
                         tasks: [1,2,3,4,5],
+                        listTasks: listasks,
                       ),
                     );
                   },
@@ -115,64 +115,7 @@ class HomeScreen extends StatelessWidget {
                               nivel: exeriniciante[index].nivel,
                               tipo: exeriniciante[index].tipo,
                               tasks: exeriniciante[index].tasks,
-                            ),
-                          );
-                        },
-                      ),
-                    ),
-                    SizedBox(height: 30), 
-                    Text(
-                      'Intermediario',
-                      style: TextStyle(
-                        fontSize: 20,
-                      ),
-                    ),
-                    Container(
-                      height: MediaQuery.of(context).size.height - 80,
-                      child: ListView.builder(
-                        physics: NeverScrollableScrollPhysics(),
-                        itemCount: exerintermediario.length,
-                        itemBuilder: (BuildContext context, int index) {
-                          return Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 8.0),
-                            child: DailyExerciseCard(
-                              exerciseName: exerintermediario[index].name,
-                              imageUrl: exerintermediario[index].imageUrl,
-                              description: exerintermediario[index].description,
-                              caloriesBurned: exerintermediario[index].calories,
-                              duration: exerintermediario[index].duration,
-                              nivel: exerintermediario[index].nivel,
-                              tipo: exerintermediario[index].tipo,
-                              tasks: exerintermediario[index].tasks,
-                            ),
-                          );
-                        },
-                      ),
-                    ),
-                    SizedBox(height: 30), 
-                    Text(
-                      'Avançado',
-                      style: TextStyle(
-                        fontSize: 20,
-                      ),
-                    ),
-                    Container(
-                      height: MediaQuery.of(context).size.height - 50,
-                      child: ListView.builder(
-                        physics: NeverScrollableScrollPhysics(),
-                        itemCount: exeravancado.length,
-                        itemBuilder: (BuildContext context, int index) {
-                          return Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 8.0),
-                            child: DailyExerciseCard(
-                              exerciseName: exeravancado[index].name,
-                              imageUrl: exeravancado[index].imageUrl,
-                              description: exeravancado[index].description,
-                              caloriesBurned: exeravancado[index].calories,
-                              duration: exeravancado[index].duration,
-                              nivel: exeravancado[index].nivel,
-                              tipo: exeravancado[index].tipo,
-                              tasks: exeravancado[index].tasks,
+                              listTasks: listasks,
                             ),
                           );
                         },

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:appfitness/pages/tela_exercicio.dart';
+import 'package:appfitness/Data/ClassTask.dart';
 
 class ExerciseCardRezumid extends StatelessWidget {
   final String exerciseName;
@@ -10,6 +11,7 @@ class ExerciseCardRezumid extends StatelessWidget {
   final int tipo;
   final int nivel;
   final List<int> tasks;
+  final List<TaskData> listTasks;
 
   ExerciseCardRezumid({
     required this.exerciseName,
@@ -20,6 +22,7 @@ class ExerciseCardRezumid extends StatelessWidget {
     required this.tipo,
     required this.nivel,
     required this.tasks,
+    required this.listTasks,
   });
 
   @override
@@ -38,6 +41,7 @@ class ExerciseCardRezumid extends StatelessWidget {
               tipo: tipo,
               nivel: nivel,
               tasks: tasks,
+              listTasks: listTasks,
             ), // Substitua ExerciseScreen() pela sua tela de exercício
           ),
         );

@@ -8,7 +8,7 @@ List<ExerciseData> exercicelist = [
     imageUrl: 'assets/images/01.png',
     calories: 0,
     duration: '',
-    description: 'Descrição do exercício diário 1',
+    description: '',
     tipo: 1,
     tasks: [1, 6, 16, 17, 20], // Alterado para lista de inteiros
     nivel: 1,
@@ -20,7 +20,7 @@ List<ExerciseData> exercicelist = [
     imageUrl: 'assets/images/01.png',
     calories: 0,
     duration: '',
-    description: 'Descrição do exercício diário 1',
+    description: '',
     tipo: 2,
     tasks: [1], // Alterado para lista de inteiros
     nivel: 1,
@@ -32,7 +32,7 @@ List<ExerciseData> exercicelist = [
     imageUrl: 'assets/images/01.png',
     calories: 0,
     duration: '',
-    description: 'Descrição do exercício diário 1',
+    description: '',
     tipo: 3,
     tasks: [7, 15], // Alterado para lista de inteiros
     nivel: 1,
@@ -44,7 +44,7 @@ List<ExerciseData> exercicelist = [
     imageUrl: 'assets/images/01.png',
     calories: 0,
     duration: '',
-    description: 'Descrição do exercício diário 1',
+    description: '',
     tipo: 4,
     tasks: [2, 3, 8, 10, 11, 12, 18, 19], // Alterado para lista de inteiros
     nivel: 1,
@@ -56,7 +56,7 @@ List<ExerciseData> exercicelist = [
     imageUrl: 'assets/images/01.png',
     calories: 0,
     duration: '',
-    description: 'Descrição do exercício diário 1',
+    description: '',
     tipo: 5,
     tasks: [4, 5, 9, 13, 14], // Alterado para lista de inteiros
     nivel: 1,
