@@ -7,6 +7,7 @@ import 'package:appfitness/Data/DataExercicios.dart';
 import 'package:appfitness/Data/DataTask.dart';
 import 'package:appfitness/Data/DataExeCorpoTodo.dart';
 import 'package:appfitness/components/imc.dart';
+import 'package:appfitness/components/card_meta_semanal.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -37,6 +38,10 @@ class HomeScreen extends StatelessWidget {
                 centerTitle: true,
                 automaticallyImplyLeading: false,
               ),
+            SizedBox(height: 30), 
+            WeeklyGoalCard(
+                    goalsAchieved: [false, true, false, true, false, false, false],
+                  ),
             SizedBox(height: 30), 
             Container(
               padding: EdgeInsets.only(left: 16.0),

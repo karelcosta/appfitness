@@ -13,6 +13,7 @@ class WeeklyGoalCard extends StatelessWidget {
       ),
       elevation: 4,
       margin: EdgeInsets.all(8),
+      color: Colors.black.withOpacity(0.8), // Define a cor do Card como preto
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -23,6 +24,7 @@ class WeeklyGoalCard extends StatelessWidget {
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
+                color: Colors.white, // Define a cor do texto como branco
               ),
             ),
             SizedBox(height: 10),
