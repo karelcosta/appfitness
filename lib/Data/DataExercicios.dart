@@ -5,7 +5,7 @@ List<ExerciseData> exercicelist = [
   ExerciseData(
     id: 1,
     name: 'Braço',
-    imageUrl: 'assets/images/01.png',
+    imageUrl: 'assets/images/braco01.jpg',
     calories: 150,
     duration: '20-40 minutos',
     description: '',
@@ -17,7 +17,7 @@ List<ExerciseData> exercicelist = [
   ExerciseData(
     id: 2,
     name: 'Peito',
-    imageUrl: 'assets/images/01.png',
+    imageUrl: 'assets/images/peito01.jpg',
     calories: 200,
     duration: '30-45 minutos',
     description: '',
@@ -29,7 +29,7 @@ List<ExerciseData> exercicelist = [
   ExerciseData(
     id: 3,
     name: 'Abdômen',
-    imageUrl: 'assets/images/01.png',
+    imageUrl: 'assets/images/abdominal.jpg',
     calories: 100,
     duration: '15-30 minutos',
     description: '',
@@ -41,7 +41,7 @@ List<ExerciseData> exercicelist = [
   ExerciseData(
     id: 4,
     name: 'Perna',
-    imageUrl: 'assets/images/01.png',
+    imageUrl: 'assets/images/perna03.jpg',
     calories: 300,
     duration: '30-60 minutos',
     description: '',
@@ -53,7 +53,7 @@ List<ExerciseData> exercicelist = [
   ExerciseData(
     id: 5,
     name: 'Costas e Ombro',
-    imageUrl: 'assets/images/01.png',
+    imageUrl: 'assets/images/costa02.jpg',
     calories: 200,
     duration: '30-45 minutos',
     description: '',

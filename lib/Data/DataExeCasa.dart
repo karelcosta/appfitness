@@ -5,7 +5,7 @@ List<ExerciseData> exercicecasalist = [
   ExerciseData(
     id: 1,
     name: 'Braço',
-    imageUrl: 'assets/images/01.png',
+    imageUrl: 'assets/images/braco02.jpg',
     calories: 120, // Ajuste da quantidade de calorias para Braço (Tipo 1)
     duration: '25-35 minutos', // Ajuste da duração para Braço (Tipo 1)
     description: '',
@@ -17,7 +17,7 @@ List<ExerciseData> exercicecasalist = [
   ExerciseData(
     id: 2,
     name: 'Peito',
-    imageUrl: 'assets/images/01.png',
+    imageUrl: 'assets/images/peito05.jpg',
     calories: 180, // Ajuste da quantidade de calorias para Peito (Tipo 2)
     duration: '30-40 minutos', // Ajuste da duração para Peito (Tipo 2)
     description: '',
@@ -29,7 +29,7 @@ List<ExerciseData> exercicecasalist = [
   ExerciseData(
     id: 3,
     name: 'Abdômen',
-    imageUrl: 'assets/images/01.png',
+    imageUrl: 'assets/images/abdominal.jpg',
     calories: 90, // Ajuste da quantidade de calorias para Abdômen (Tipo 3)
     duration: '15-25 minutos', // Ajuste da duração para Abdômen (Tipo 3)
     description: '',
@@ -41,7 +41,7 @@ List<ExerciseData> exercicecasalist = [
   ExerciseData(
     id: 4,
     name: 'Perna',
-    imageUrl: 'assets/images/01.png',
+    imageUrl: 'assets/images/perna04.jpg',
     calories: 280, // Ajuste da quantidade de calorias para Perna (Tipo 4)
     duration: '35-55 minutos', // Ajuste da duração para Perna (Tipo 4)
     description: '',
@@ -53,7 +53,7 @@ List<ExerciseData> exercicecasalist = [
   ExerciseData(
     id: 5,
     name: 'Costas e Ombro',
-    imageUrl: 'assets/images/01.png',
+    imageUrl: 'assets/images/costa05.jpg',
     calories: 190, // Ajuste da quantidade de calorias para Costas e Ombro (Tipo 5)
     duration: '30-40 minutos', // Ajuste da duração para Costas e Ombro (Tipo 5)
     description: '',

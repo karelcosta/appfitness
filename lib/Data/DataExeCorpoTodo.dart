@@ -5,7 +5,7 @@ List<ExerciseData> exercicelistcorpotodo = [
   ExerciseData(
     id: 1,
     name: 'Membros Superiores',
-    imageUrl: 'assets/images/01.png',
+    imageUrl: 'assets/images/costa06.jpg',
     calories: 400,
     duration: '60 a 75 minuto',
     description: 'Treino de menbros superiores braço, peito, costas, ombro',

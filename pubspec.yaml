@@ -105,6 +105,8 @@ flutter:
     - assets/images/corpotodo03.jpg
     - assets/images/braco01.jpg
     - assets/images/braco02.jpg
+
+    - assets/images/abdominal.jpg
     # - assets/db/appfitness.db
     # - assets/db/appfitness.db-journal
 

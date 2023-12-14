@@ -75,32 +75,28 @@ class ExploreScreen extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Container(
-                height: 178,
-                width: double.infinity,
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 16.0),
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: casalist.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: ExerciseCardRezumid(
-                          exerciseName: casalist[index].name,
-                          imageUrl: casalist[index].imageUrl,
-                          description: casalist[index].description,
-                          caloriesBurned: casalist[index].calories,
-                          duration: casalist[index].duration,
-                          nivel: casalist[index].calories,
-                          tipo: casalist[index].calories,
-                          tasks: casalist[index].tasks,
-                          listTasks: listaskscasa,
-                        ),
-                      );
-                    },
-                  ),
-                ),
-              ),
+                      height: MediaQuery.of(context).size.height - 80,
+                      child: ListView.builder(
+                        physics: NeverScrollableScrollPhysics(),
+                        itemCount: casalist.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 8.0),
+                            child: ExerciseCardRezumid(
+                              exerciseName: casalist[index].name,
+                              imageUrl: casalist[index].imageUrl,
+                              description: casalist[index].description,
+                              caloriesBurned: casalist[index].calories,
+                              duration: casalist[index].duration,
+                              nivel: casalist[index].nivel,
+                              tipo: casalist[index].tipo,
+                              tasks: casalist[index].tasks,
+                              listTasks: listasks,
+                            ),
+                          );
+                        },
+                      ),
+                    ),
               SizedBox(height: 100),
             ],
           ),
