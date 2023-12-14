@@ -20,11 +20,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
+      debugShowCheckedModeBanner: false,
       home: MainScreen(),
     );
   }
 }
-
 class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -51,28 +51,42 @@ class MainScreen extends StatelessWidget {
             left: 0,
             right: 0,
             bottom: 30,
-            child: Center(
-              child: ButtonTheme(
-                minWidth: 300.0,
-                height: 60.0,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => NavigationScreen()),
-                    );
-                  },
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                  ),
-                  child: Text(
-                    'Avançar',
-                    style: TextStyle(fontSize: 18.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'TrainTact',
+                  style: TextStyle(
+                    fontSize: 36.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontFamily: 'YourFontHere', // Substitua pelo nome da fonte desejada
+                    // Exemplo de fonte Google: 'Roboto'
                   ),
                 ),
-              ),
+                SizedBox(height: 40), // Ajuste o espaçamento conforme necessário
+                ButtonTheme(
+                  minWidth: 300.0,
+                  height: 60.0,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => NavigationScreen()),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                    ),
+                    child: Text(
+                      'Avançar',
+                      style: TextStyle(fontSize: 18.0),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ],

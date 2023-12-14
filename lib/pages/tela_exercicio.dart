@@ -113,34 +113,6 @@ class ExerciseScreen extends StatelessWidget {
           ]
         ),
       ),
-      bottomNavigationBar: GestureDetector(
-        onTap: () {
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(builder: (context) => playscrean()), // Substitua 'NextScreen' pelo nome da próxima tela
-          // );
-        },
-        child: Container(
-          height: 60,
-          decoration: BoxDecoration(
-            color: Colors.blue, // Cor do botão
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(10),
-              topRight: Radius.circular(10),
-            ),
-          ),
-          child: Center(
-            child: Text(
-              'Próxima Tela',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-        ),
-      ),
     );
   }
 }

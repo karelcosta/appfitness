@@ -1,16 +1,16 @@
 import 'package:appfitness/Data/ClassExercise.dart';
 
-List<ExerciseData> exerciceCasaListcasa = [
+List<ExerciseData> exercicecasalist = [
   // Braço
-    ExerciseData(
+  ExerciseData(
     id: 1,
     name: 'Braço',
     imageUrl: 'assets/images/01.png',
-    calories: 0,
-    duration: '',
+    calories: 120, // Ajuste da quantidade de calorias para Braço (Tipo 1)
+    duration: '25-35 minutos', // Ajuste da duração para Braço (Tipo 1)
     description: '',
     tipo: 1,
-    tasks: [1, 6, 16, 17, 20], // Alterado para lista de inteiros
+    tasks: [16, 17, 18, 19, 20], // IDs dos exercícios para Braço (Tipo 1)
     nivel: 1,
   ),
   // Peito
@@ -18,23 +18,23 @@ List<ExerciseData> exerciceCasaListcasa = [
     id: 2,
     name: 'Peito',
     imageUrl: 'assets/images/01.png',
-    calories: 0,
-    duration: '',
+    calories: 180, // Ajuste da quantidade de calorias para Peito (Tipo 2)
+    duration: '30-40 minutos', // Ajuste da duração para Peito (Tipo 2)
     description: '',
     tipo: 2,
-    tasks: [1], // Alterado para lista de inteiros
+    tasks: [1, 2, 3, 4, 5], // IDs dos exercícios para Peito (Tipo 2)
     nivel: 1,
   ),
-  // Abdomen
+  // Abdômen
   ExerciseData(
     id: 3,
     name: 'Abdômen',
     imageUrl: 'assets/images/01.png',
-    calories: 0,
-    duration: '',
+    calories: 90, // Ajuste da quantidade de calorias para Abdômen (Tipo 3)
+    duration: '15-25 minutos', // Ajuste da duração para Abdômen (Tipo 3)
     description: '',
     tipo: 3,
-    tasks: [7, 15], // Alterado para lista de inteiros
+    tasks: [21, 22, 23, 24, 25], // IDs dos exercícios para Abdômen (Tipo 3)
     nivel: 1,
   ),
   // Perna
@@ -42,11 +42,11 @@ List<ExerciseData> exerciceCasaListcasa = [
     id: 4,
     name: 'Perna',
     imageUrl: 'assets/images/01.png',
-    calories: 0,
-    duration: '',
+    calories: 280, // Ajuste da quantidade de calorias para Perna (Tipo 4)
+    duration: '35-55 minutos', // Ajuste da duração para Perna (Tipo 4)
     description: '',
     tipo: 4,
-    tasks: [2, 3, 8, 10, 11, 12, 18, 19], // Alterado para lista de inteiros
+    tasks: [6, 7, 8, 9, 10], // IDs dos exercícios para Perna (Tipo 4)
     nivel: 1,
   ),
   // Costas e Ombro
@@ -54,11 +54,11 @@ List<ExerciseData> exerciceCasaListcasa = [
     id: 5,
     name: 'Costas e Ombro',
     imageUrl: 'assets/images/01.png',
-    calories: 0,
-    duration: '',
+    calories: 190, // Ajuste da quantidade de calorias para Costas e Ombro (Tipo 5)
+    duration: '30-40 minutos', // Ajuste da duração para Costas e Ombro (Tipo 5)
     description: '',
     tipo: 5,
-    tasks: [4, 5, 9, 13, 14], // Alterado para lista de inteiros
+    tasks: [11, 12, 13, 14, 15], // IDs dos exercícios para Costas e Ombro (Tipo 5)
     nivel: 1,
   ),
 ];

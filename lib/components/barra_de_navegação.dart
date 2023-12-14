@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:appfitness/pages/home_page.dart';
 import 'package:appfitness/pages/explore_page.dart';
-import 'package:appfitness/pages/perfil_page.dart';
 
 class NavigationScreen extends StatefulWidget {
   @override
@@ -13,7 +12,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
   final List<Widget> _screens = [
     HomeScreen(),
     ExploreScreen(),
-    ProfileScreen(),
+    // Removida a referência para ProfileScreen
   ];
   
   @override
@@ -48,16 +47,13 @@ class _NavigationScreenState extends State<NavigationScreen> {
                 items: [
                   BottomNavigationBarItem(
                     icon: Icon(Icons.home),
-                    label: '',
+                    label: 'Home',
                   ),
                   BottomNavigationBarItem(
                     icon: Icon(Icons.explore),
-                    label: '',
+                    label: 'Explore',
                   ),
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.person),
-                    label: '',
-                  ),
+                  // O item de perfil foi removido
                 ],
               ),
             ),

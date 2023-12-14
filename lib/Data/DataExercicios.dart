@@ -6,11 +6,11 @@ List<ExerciseData> exercicelist = [
     id: 1,
     name: 'Braço',
     imageUrl: 'assets/images/01.png',
-    calories: 0,
-    duration: '',
+    calories: 150,
+    duration: '20-40 minutos',
     description: '',
     tipo: 1,
-    tasks: [1, 6, 16, 17, 20], // Alterado para lista de inteiros
+    tasks: [6, 16, 17, 20, 31, 32, 33, 34, 35], // Alterado para lista de inteiros
     nivel: 1,
   ),
   // Peito
@@ -18,11 +18,11 @@ List<ExerciseData> exercicelist = [
     id: 2,
     name: 'Peito',
     imageUrl: 'assets/images/01.png',
-    calories: 0,
-    duration: '',
+    calories: 200,
+    duration: '30-45 minutos',
     description: '',
     tipo: 2,
-    tasks: [1], // Alterado para lista de inteiros
+    tasks: [ 1, 21, 22, 23, 24, 25], // Alterado para lista de inteiros
     nivel: 1,
   ),
   // Abdomen
@@ -30,11 +30,11 @@ List<ExerciseData> exercicelist = [
     id: 3,
     name: 'Abdômen',
     imageUrl: 'assets/images/01.png',
-    calories: 0,
-    duration: '',
+    calories: 100,
+    duration: '15-30 minutos',
     description: '',
     tipo: 3,
-    tasks: [7, 15], // Alterado para lista de inteiros
+    tasks: [7, 15, 26, 27, 28, 29, 30], // Alterado para lista de inteiros
     nivel: 1,
   ),
   // Perna
@@ -42,8 +42,8 @@ List<ExerciseData> exercicelist = [
     id: 4,
     name: 'Perna',
     imageUrl: 'assets/images/01.png',
-    calories: 0,
-    duration: '',
+    calories: 300,
+    duration: '30-60 minutos',
     description: '',
     tipo: 4,
     tasks: [2, 3, 8, 10, 11, 12, 18, 19], // Alterado para lista de inteiros
@@ -54,8 +54,8 @@ List<ExerciseData> exercicelist = [
     id: 5,
     name: 'Costas e Ombro',
     imageUrl: 'assets/images/01.png',
-    calories: 0,
-    duration: '',
+    calories: 200,
+    duration: '30-45 minutos',
     description: '',
     tipo: 5,
     tasks: [4, 5, 9, 13, 14], // Alterado para lista de inteiros

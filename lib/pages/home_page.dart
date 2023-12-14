@@ -2,21 +2,20 @@ import 'package:appfitness/Data/ClassExercise.dart';
 import 'package:flutter/material.dart';
 import 'package:appfitness/components/card_exercicios.dart';
 import 'package:appfitness/components/card_exercicios_diario.dart';
-import 'package:appfitness/adm.dart'; 
-import 'package:appfitness/components/card_meta_semanal.dart';
-// import 'package:appfitness/Data/DB.dart';
+import 'package:appfitness/adm.dart';
 import 'package:appfitness/Data/DataExercicios.dart';
-import 'package:appfitness/Data/DataExeCasa.dart';
 import 'package:appfitness/Data/DataTask.dart';
+import 'package:appfitness/Data/DataExeCorpoTodo.dart';
+import 'package:appfitness/components/imc.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<Map<String, dynamic>> corpotodo = ExerciseData2.getExerciseList();
+    List<ExerciseData> corpotodo = filtrarExercicios(exercicelistcorpotodo, [1,2,3,4,5], [1,2,3,4]);
     List<ExerciseData> exeriniciante = filtrarExercicios(exercicelist, [1,2,3,4,5], [1]);
 
     return Scaffold(
-      backgroundColor: Color(0xFF4D008C),
+      backgroundColor: Color(0xFF3F0072),
       body:SafeArea(
         child: SingleChildScrollView(
 
@@ -25,16 +24,19 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             AppBar(
-              backgroundColor: Colors.transparent,
-              elevation: 0,
-              automaticallyImplyLeading: false, 
-            ),
-            // Container(
-            //   padding: EdgeInsets.symmetric(horizontal: 16.0),
-            //   child: WeeklyGoalCard(
-            //     goalsAchieved: [true, true, false, false, false, false, false],
-            //   ),
-            // ),
+                backgroundColor: Colors.transparent,
+                elevation: 0,
+                title: Text(
+                  'TrainTact',
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                centerTitle: true,
+                automaticallyImplyLeading: false,
+              ),
             SizedBox(height: 30), 
             Container(
               padding: EdgeInsets.only(left: 16.0),
@@ -58,14 +60,14 @@ class HomeScreen extends StatelessWidget {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ExerciseCard(
-                        exerciseName: corpotodo[index]['name'],
-                        imageUrl: corpotodo[index]['imageUrl'],
-                        caloriesBurned: corpotodo[index]['calories'],
-                        duration: corpotodo[index]['duration'],
-                        description: corpotodo[index]['description'],
-                        nivel: corpotodo[index]['calories'],
-                        tipo: corpotodo[index]['calories'],
-                        tasks: [1,2,3,4,5],
+                        exerciseName: corpotodo[index].name,
+                        imageUrl: corpotodo[index].imageUrl,
+                        caloriesBurned: corpotodo[index].calories,
+                        duration: corpotodo[index].duration,
+                        description: corpotodo[index].description,
+                        nivel: corpotodo[index].nivel,
+                        tipo: corpotodo[index].tipo,
+                        tasks: corpotodo[index].tasks,
                         listTasks: listasks,
                       ),
                     );
@@ -73,7 +75,9 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),  
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 20),
+            BMIComponent(),
+            SizedBox(height: 20),
             Container(
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -85,17 +89,10 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Treino em Casa',
+                      'Treinos',
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(height: 30),
-                    Text(
-                      'Iniciante',
-                      style: TextStyle(
-                        fontSize: 20,
                       ),
                     ),
                     Container(

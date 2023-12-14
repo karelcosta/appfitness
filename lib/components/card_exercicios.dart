@@ -109,13 +109,6 @@ class ExerciseCard extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(width: 8),
-                        // Play button
-                        Icon(
-                          Icons.play_circle_filled,
-                          color: Colors.white,
-                          size: 40,
-                        ),
                       ],
                     ),
                   ],
