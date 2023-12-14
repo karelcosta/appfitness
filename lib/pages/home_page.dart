@@ -30,12 +30,12 @@ class HomeScreen extends StatelessWidget {
               elevation: 0,
               automaticallyImplyLeading: false, 
             ),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: WeeklyGoalCard(
-                goalsAchieved: [true, true, false, false, false, false, false],
-              ),
-            ),
+            // Container(
+            //   padding: EdgeInsets.symmetric(horizontal: 16.0),
+            //   child: WeeklyGoalCard(
+            //     goalsAchieved: [true, true, false, false, false, false, false],
+            //   ),
+            // ),
             SizedBox(height: 30), 
             Container(
               padding: EdgeInsets.only(left: 16.0),

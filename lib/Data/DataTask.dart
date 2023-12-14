@@ -121,4 +121,94 @@ List<TaskData> listasks = [
     carga: '3 x 10',
     tipo: 1, // Braço
   ),
+    TaskData(
+    id: 21,
+    name: 'Flexão declinada',
+    carga: '3 x 10',
+    tipo: 2, // Peito
+  ),
+  TaskData(
+    id: 22,
+    name: 'Fly em máquina',
+    carga: '3 x 10',
+    tipo: 2, // Peito
+  ),
+  TaskData(
+    id: 23,
+    name: 'Pullover com halteres',
+    carga: '3 x 10',
+    tipo: 2, // Peito
+  ),
+  TaskData(
+    id: 24,
+    name: 'Chest press inclinado',
+    carga: '3 x 10',
+    tipo: 2, // Peito
+  ),
+  TaskData(
+    id: 25,
+    name: 'Crossover na polia',
+    carga: '3 x 10',
+    tipo: 2, // Peito
+  ),
+  TaskData(
+    id: 26,
+    name: 'Russian twist com bola medicinal',
+    carga: '3 x 10',
+    tipo: 3, // Abdômen
+  ),
+  TaskData(
+    id: 27,
+    name: 'Prancha lateral',
+    carga: '3 x 10',
+    tipo: 3, // Abdômen
+  ),
+  TaskData(
+    id: 28,
+    name: 'Bicicleta no ar',
+    carga: '3 x 10',
+    tipo: 3, // Abdômen
+  ),
+  TaskData(
+    id: 29,
+    name: 'Dragon flag',
+    carga: '3 x 10',
+    tipo: 3, // Abdômen
+  ),
+  TaskData(
+    id: 30,
+    name: 'Hanging leg raise',
+    carga: '3 x 10',
+    tipo: 3, // Abdômen
+  ),
+  TaskData(
+    id: 31,
+    name: 'Tricep dip',
+    carga: '3 x 10',
+    tipo: 1, // Braço
+  ),
+  TaskData(
+    id: 32,
+    name: 'Martelo com halteres',
+    carga: '3 x 10',
+    tipo: 1, // Braço
+  ),
+  TaskData(
+    id: 33,
+    name: 'Supino fechado',
+    carga: '3 x 10',
+    tipo: 1, // Braço
+  ),
+  TaskData(
+    id: 34,
+    name: 'Puxada alta na polia',
+    carga: '3 x 10',
+    tipo: 1, // Braço
+  ),
+  TaskData(
+    id: 35,
+    name: 'Kickback com halteres',
+    carga: '3 x 10',
+    tipo: 1, // Braço
+  ),
 ];

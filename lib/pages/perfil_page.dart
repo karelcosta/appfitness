@@ -63,6 +63,8 @@ class ProfileScreen extends StatelessWidget {
                     goalsAchieved: [true, false, false, false, false, false, false],
                   ),
             SizedBox(height: 20), 
+            // WeightReport(),
+            SizedBox(height: 20), 
             BMIComponent(),
             SizedBox(height: 20), 
             Center(

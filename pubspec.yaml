@@ -46,6 +46,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  hive_generator: ^1.1.1
+  build_runner: ^2.1.8
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -82,6 +84,27 @@ flutter:
     - assets/images/14.png
     - assets/images/15.png
     - assets/images/16.png
+    - assets/images/perna01.jpg
+    - assets/images/perna02.jpg
+    - assets/images/perna03.jpg
+    - assets/images/perna04.jpg
+    - assets/images/perna05.jpg
+    - assets/images/costa01.jpg
+    - assets/images/costa02.jpg
+    - assets/images/costa03.jpg
+    - assets/images/costa04.jpg
+    - assets/images/costa05.jpg
+    - assets/images/costa06.jpg
+    - assets/images/peito01.jpg
+    - assets/images/peito02.jpg
+    - assets/images/peito03.jpg
+    - assets/images/peito04.jpg
+    - assets/images/peito05.jpg
+    - assets/images/corpotodo.jpg
+    - assets/images/corpotodo02.jpg
+    - assets/images/corpotodo03.jpg
+    - assets/images/braco01.jpg
+    - assets/images/braco02.jpg
     # - assets/db/appfitness.db
     # - assets/db/appfitness.db-journal
 
